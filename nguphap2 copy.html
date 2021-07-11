@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Favicon-->
+<link rel="apple-touch-icon" sizes="180x180" href="https://nguyenvanthanhminn.github.io/nguphap2/nguphapfavicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nguyenvanthanhminn.github.io/nguphap2/nguphapfavicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nguyenvanthanhminn.github.io/nguphap2/nguphapfavicon.svg">
+<title>Ngữ pháp 2-2</title>
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300);
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		overflow-x: hidden;
+	}
+	/*2 div header cung 1 hang*/
+	div.header{
+		width: 100%;
+		height: auto;
+	}
+	div.main-title{
+		float: left;
+		width: 70%;
+	}
+	div.button{
+		float: left;
+		width: 30%;
+	}
+	.header{
+		margin-top: 1.5%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	.button{
+		letter-spacing: 30%;
+	}
+	.btn{
+		padding: 8px;
+		border-radius: 4px;
+		background: blue;
+		border: none;
+		color: white;	
+	}
+	.btn:hover{
+		cursor: pointer;
+		background: red;
+	}
+	#btn1{width: 25%;}
+	#btn2{width: 28%;}
+	#btn3{width: 23%;}
+	/*2 div menu cung 1 hang*/
+	div.main{
+		width: 100%;
+		margin-top: 2.5%;
+	}
+	div.menu{
+		padding-left: 0.75%;
+		float: left;
+		width: 34.25%;
+	}
+	div.content{
+		float: left;
+		width: 64%;
+		text-align: justify;
+		padding-right: 0.5%;
+		margin-left: 0.5%;
+	}
+	table, th, td{
+		border: 0.25px solid;
+	}
+	.menu>ul{
+		line-height: 190%;
+		background: #111;
+		color: #fff;
+/*		width: 26%;*/
+		font-weight: bold;
+		font-family: 'Montserrat', 'Open Sans', sans-serif;
+		}
+	a{text-decoration: none;}
+	.menu>ul>li{
+		overflow: hidden;
+		transition: all .1s;
+	}
+	.menu>ul>li>a{
+		color: white;
+	}
+	.menu> ul > li:hover{
+		cursor: pointer;
+		background: #5fa2db;
+	}
+	.m-t{
+		margin-left: 3%;
+	}
+	#break-header{display: none;}
+	#show{display: none;padding-bottom: 3%;width: 30%;}
+	#hide{padding-bottom: 0.5%;width: 30%;}
+	#hide:hover, #show:hover{
+		cursor: pointer;
+	}
+	.c-titile{
+		font-weight: bold;
+		font-size: 140%;
+	}
+	.c-titile:hover{color:red; cursor: pointer;}
+	/*Nut hoan thanh*/
+	.complete{
+		margin-top:70%;
+	}
+	#fi-btn{
+		background: blue;
+		color: white;
+		margin-top: 10%;
+		margin-left: 45%;
+		padding: 8px 10px 8px;	/*top (right left) bottom*/
+		border: none;
+		font-size: 110%;
+		border-radius: 4px;
+	}
+	#fi-btn:hover{
+		cursor: pointer;
+		background: purple;}
+	/*Nut back to top*/
+	#btn-top
+	{
+		display: none;
+		padding: 3px 13.5px 8px;	/*top (right left) bottom*/
+		height: 45px;
+		background: blue; 
+		color: white;
+		border-radius: 4px;
+		border: none; 
+		position: fixed; right: 2%; bottom: 10%;
+	}
+	#btn-top:hover
+	{
+		cursor: pointer;
+	}
+	#image{width: 95%;}
+	/*2 div footer cung 1 hang*/
+	div.footer{
+		margin-top: 5%;
+		width: 100%;
+	}
+	div.design{
+		padding-left: 1%;
+		padding-bottom: 0.5%;
+		float:left;
+		width: 87%;
+	}
+	div.footer-content
+	{
+		float:left;
+		padding-right: 1%;
+		padding-bottom: 0.5%;
+		width: 11%;
+	}
+	.fa{font-size: 2em;}
+	#s:hover{cursor: pointer;}
+	/*Responsive*/
+	@media only screen and (max-width: 414px)
+	{
+			/*2 div header 2 hang*/
+	div.header{
+		width: 100%;
+		height: auto;
+	}
+	div.main-title{
+		float: left;
+		width: 100%;
+	}
+		#break-header{display: block;}
+	div.button{
+		float: left;
+		width: 100%;
+	}
+		/*2 div menu 2 hang*/
+	div.main{
+		width: 100%;
+		margin-top: 10.5%;
+	}
+	div.menu{
+		float: left;
+		margin-left: 20%;
+		width: 60%;
+	}
+	div.break-main{
+		float: left;
+		width: 1.5%;
+	}
+	div.content{
+		margin-left: 3%;
+		margin-right: 3%;
+		width: 100%;
+	}
+		#image{width: 100%;}
+	/*Nut back to top*/
+	#btn-top
+	{
+		display: none;
+		padding: 3px 13.5px 8px;	/*top (right left) bottom*/
+		height: 45px;
+		background: blue; 
+		color: white;
+		border-radius: 4px;
+		border: none; 
+		position: fixed; right: 2%; bottom: 5%;
+	}
+/*2 div footer cung 1 hang*/
+	div.footer{
+		margin-top: 90%;
+		margin-bottom: 1%;
+		width: 100%;
+	}
+	div.design{
+		padding-left: 1%;
+		float:left;
+		width: 87%;
+	}
+	div.footer-content
+	{
+		display: none;
+	}	
+	}
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+<script>
+		const hide=() =>{
+			$(".m-t").hide(0);
+			document.getElementById("menu").style.width="10%";
+			document.getElementById("content").style.width="88%";	
+			document.getElementById("hide").style.display="none";
+			document.getElementById("show").style.display="block";
+		};
+	const show=() =>{
+			$(".m-t").show(0);
+			document.getElementById("menu").style.width="34%";
+			document.getElementById("content").style.width="64%";	
+			document.getElementById("hide").style.display="block";
+			document.getElementById("show").style.display="none";
+	};
+</script>
+<title>nguphap2 copy</title>
+</head>
+<body>
+	<div class="header" id="header">
+		<div class="main-title">
+			<h1>NGỮ PHÁP CHỦ ĐIỂM 2</h1>
+		</div><div id="break-header"><br/></div>
+		<div class="button">
+			<button class="btn" id="btn1">Home</button>&emsp;
+			<button class="btn" id="btn2">Video giảng</button>&emsp;
+			<button class="btn" id="btn3">Contact</button>
+		</div>
+	</div>
+	<br/>
+	<div class="main">
+		<div class="menu" id="menu">
+			<ul id="un-list" class="un-list">
+		<div style="padding-left:1.5%;padding-top: 1%;"><span id="show" onclick="show()" class="fa fa-bars"></span><span id="hide" onclick="hide()" class="fa fa-minus"></span></div>
+		<li id="les1">
+			<a href="#">&ensp;Buổi 1<br/><span  class="m-t">Tiếng Anh: Thì quá khứ tiếp diễn, hiện tại tiếp diễn</span></a>
+		</li>
+		<li id="les2">
+			<a href="#">&ensp;Buổi 2<br/><span  class="m-t"> Tiếng Anh: Quá khứ đơn; Tiếng hàn: cách nói quá khứ </span></a>
+		</li>
+		<li id="les3">
+			<a href="#">&ensp;Buổi 3<br/><span  class="m-t"> Tiếng Hàn: 여기, 거기, 저기; 이것, 그것, 저것</span></a>
+		</li>
+		<li id="les4">
+			<a href="#" >&ensp;Buổi 4<br/><span  class="m-t"> Tiếng Hàn: 에; 지말다; 아/ 어도 되다</span> </a>
+		</li>
+		<li id="les5">
+			<a href="#">&ensp;Buổi 5<br/><span  class="m-t"> Tiếng Anh và Hàn: Cách nói nguyên nhân</span></a>
+		</li>
+	</ul>
+		</div>
+		<script>
+			var u=1;
+			let le1 =document.getElementById("les1");
+			let le2 =document.getElementById("les2");
+			let le3 =document.getElementById("les3");
+			let le4 =document.getElementById("les4");
+			let le5 =document.getElementById("les5");
+			let fin=document.getElementById("fi-btn");
+			
+			le1.onclick = function show1(){
+				u=1;
+				$("#1").show(0);
+				$("#2, #3, #4, #5").hide(0);
+			}
+			le2.onclick= function show2(){
+				u=2;
+				$("#2").show(0);
+				$("#1, #3, #4, #5").hide(0);
+			}
+			le3.onclick= function show3(){
+				u=3;
+				$("#3").show(0);
+				$("#2, #1, #4, #5").hide(0);
+			}
+			le4.onclick= function show4(){
+				u=4;
+				$("#4").show(0);
+				$("#2, #3, #1, #5").hide(0);
+			}
+			le5.onclick= function show5(){
+				u=5;
+				$("#5").show(0);
+				$("#2, #3, #4, #1").hide(0);
+			}
+			const Fin=() =>{
+				if(u<5){
+					alert("Đang ở buổi " +u +", chưa hoàn thành ngữ pháp 2");
+					
+				}
+				else{
+				var o = prompt("Về trang chủ (nhập Home) hay đến bài tiếp theo (mặc định)? ","Đến bài tiếp theo");
+						if(o == "Home"){
+							open("https://nguyenvanthanhminn.wixsite.com/list2","_self");
+						}
+						else {
+							open("https://nguyenvanthanhminn.wixsite.com/grammar3","_self");
+						}
+				}
+			};
+	const social = ()=>{
+		open("https://www.facebook.com/mik.tae.7/","_self");
+	};
+		</script>
+		<div class="content" id="content">
+			<div id="1">
+				<div class="c-titile">A. Thì quá khứ tiếp diễn</div>
+				<div style="font-size: 130%;">
+					<p style="font-weight: bold; text-align: justify;">
+						A.1 Khái niệm:
+					</p>
+					<p style="text-align: justify;">Thì quá khứ tiếp diễn (Past continuous tense) dùng để diễn tả một hành động, sự việc đang diễn ra xung quanh một thời điểm xác định trong quá khứ. Hành động, sự việc đó xảy ra trước thời điểm đó và chưa kết thúc.</p>
+					<img id="image" src="https://nguyenvanthanhminn.github.io/nguphap2/nguphap2-2-1.PNG" alt="example"/>
+					<p style="font-weight: bold; text-align: justify;">
+						A.2 Công thức:
+					</p>
+					<p style="text-align: justify;">
+						a. Câu khẳng định:<br/>
+						Cấu trúc: S + was/ were + V-ing<br/>Trong đó: S (subject): chủ ngữ; V-ing: động từ thêm “-ing”<br/>Lưu ý: Chủ ngữ(S) là I/ He/ She/ It/ Danh từ số ít / Danh từ không đếm được + was<br/>Còn khi S là We/ You/ They/ Danh từ số nhiều + were<br/>
+						Ví dụ:<br/>
+						<ol style="padding-left: 5%;">
+							<li>I was thinking about someone last night.</li>
+							<li>It was raining when I got up.</li>
+						</ol>
+						b. Câu phủ định:<br/>
+						Cấu trúc:  S + was/ were + not + V-ing<br/>
+					Lưu ý: wasn<sup>'</sup>t= was not; weren<sup>'</sup>t= were not.<br/>
+					Ví dụ:<br/>
+					<ol style="padding-left: 5%;">
+							<li>He wasn’t doing anything when his boss came yesterday.</li>
+							<li>I wasn’t paying attention you while I was watching TV.</li>
+						</ol>
+					c. Câu nghi vấn:<br/>
+					Yes/ No question<br/>
+					Cấu trúc: Was/ Were + S + V-ing?<br/>
+					Trả lời:<br/>
+					Đồng ý: Yes, S + was/ were<br/>Không đồng ý: No, S + wasn<sup>'</sup>t/ weren<sup>'</sup>t.<br/>
+					Wh- question<br/>
+					Cấu trúc: Wh-word + was/ were + S + V-ing?<br/>
+					Trả lời:
+					tùy tình huống đưa ra câu trả lời cụ thể.<br/>
+					</p>
+				<p style="font-weight: bold; text-align: justify;">
+						A.3 Cách sử dụng:
+					</p>
+				<table width="95%" cellspacing="0" cellpadding="5">
+					<tr><th style="padding-left: 8px; ">Cách sử dụng</th><th style="padding-left: 8px;padding-right: 8px; ">Ví dụ</th></tr>
+					<tr>
+						<td style="padding-left: 8px;padding-right: 8px;">Diễn tả một hành động đang xảy ra tại một thời điểm trong quá khứ.</td>
+						<td style="padding-left: 8px;padding-right: 8px; ">
+							<ul style="padding-left:15px;">
+								<li>He was playing badminton at 9 a.m yesterday.</li>
+								<li>This time last year they were living in England.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-left: 8px;padding-right: 8px;">Diễn tả những hành động xảy ra đồng thời trong quá khứ.</td>
+						<td style="padding-left: 8px;padding-right: 8px; ">
+							<ul style="padding-left:15px;">
+								<li>She was cooking while her mother was reading a book.</li>
+								<li>While I was coming, she was using the computer.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-left: 8px;padding-right: 8px;">Diễn đạt hành động đang xảy ra thì có hành động khác xen vào.</td>
+						<td style="padding-left: 8px;padding-right: 8px; ">
+							<ul style="padding-left:15px;">
+								<li>When Karen arrived, we were having dinner.</li>
+								<li>Matt phoned when we were dancing.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-left: 8px;padding-right: 8px;">Diễn tả một hành động từng lặp đi lặp lại trong quá khứ và làm phiền đến người khác.</td>
+						<td style="padding-left: 8px;padding-right: 8px; ">
+							<ul style="padding-left:15px;">
+								<li>When he worked here, he was always making noise.</li>
+								<li>My friends were always complaining about their husbands.</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+					<p style="font-weight: bold; text-align: justify;">
+						A.4 Dấu hiệu nhận biết:
+					</p>
+					<p style="text-align: justify;line-height: 125%;">
+						Các trạng từ quá khứ kèm theo thời điểm xác định:<br/>
+						- At + giờ + thời gian trong quá khứ. (at 9 a.m yesterday, …)<br/>
+						- At this time + thời gian trong quá khứ. (at this time two weeks ago, at this time last year…)<br/>
+						-  In + năm quá khứ (in 2000, in 2005)<br/>
+						- In the past<br/>
+						- Trong câu có “when” khi diễn tả một hành động đang xảy ra và một hành động khác xen vào. When I was cooking, she came in. (Tôi đang nấu ăn thì cô ấy đi vào)<br/>
+						The light went out when we were watching TV (Điện mất khi chúng tôi đang xem ti vi)<br/>
+						- Cân nhắc sử dụng thì Quá khứ tiếp diễn khi có xuất hiện các từ như: While (trong khi); When (Khi); at that time (vào thời điểm đó);
+						<br/>Duc was dancing while I was singing (Đức đang nhảy trong khi tôi đang hát)<br/>
+						<p style="font-weight: bold; text-align: justify;">
+						A.5 Phân biệt when và while:</p>
+				<p style="text-align: justify;">
+							Nhiều bạn khi học tiếng Anh thường hay bị nhầm 2 từ này do chúng có cùng nghĩa là “khi”. Tuy nhiên, các bạn lưu ý “while” thường dùng cho những hành động đang xảy ra trong một khoảng thời gian kéo dài, còn “when” thường dùng cho những hành động xảy ra chen ngang tại một mốc thời gian nhất định. Do vậy, “when” có thể dùng cho cả thì Quá khứ đơn và Quá khứ tiếp diễn, nhưng “while” chỉ có thể dùng cho thì Quá khứ tiếp diễn.
+						</p>
+					</p>
+				</div>
+				<div class="c-titile">B. Thì hiện tại tiếp diễn</div>
+			</div>
+			<div id="2" style="display: none">B2</div>
+			<div id="3" style="display: none">B3</div>
+			<div id="4" style="display: none">B4</div>
+			<div id="5" style="display: none">B5</div>
+		</div>
+	</div><br/>
+	<div class="complete">
+		<button id="fi-btn" onclick="Fin()">Hoàn thành</button>
+	</div>
+	<div class="backtop">
+		<button id="btn-top" onclick="backtop()" class="fa fa-angle-up"><a href="#header"></a></button>
+	</div>
+<script>
+	 //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
+    window.onscroll = function() {scrollFunction()};
+    // khai báo hàm scrollFunction
+    function scrollFunction() {
+        // Kiểm tra vị trí hiện tại của con trỏ so với nội dung trang
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //nếu lớn hơn 20px thì hiện button
+            document.getElementById("btn-top").style.display = "block";
+        } else {
+             //nếu nhỏ hơn 20px thì ẩn button
+            document.getElementById("btn-top").style.display = "none";
+        }
+    }
+    //gán sự kiện click cho button
+    document.getElementById('btn-top').addEventListener("click", function(){
+        //Nếu button được click thì nhảy về đầu trang
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+</script>
+	<footer>
+		<div class="footer">
+			<div class="design">
+				<p><span class="fa fa-copyright" style="font-size:110%;"></span>&ensp;Trang ngữ pháp<br/><span id="s" onclick="social()">Designed and coded by MikTae</span></p>
+			</div>
+			<div class="footer-content">
+				<p>Ngữ pháp chủ điểm 2</p>
+			</div>
+		</div>
+		</footer>
+</body>
+</html>
