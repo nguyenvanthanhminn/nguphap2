@@ -232,24 +232,48 @@
 </style>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
 <script>
+	let w = $(window).width();
 		const hide=() =>{
-			$(".m-t").hide(0);
+			if(w>414){
+				$(".m-t").hide(0);
 			document.getElementById("menu").style.width="10%";
 			document.getElementById("content").style.width="88%";	
 			document.getElementById("hide").style.display="none";
 			document.getElementById("show").style.display="block";
+			}
+		else{
+			$(".m-t").hide(0);
+			document.getElementById("menu").style.width="100%";
+			document.getElementById("content").style.width="100%";	
+			document.getElementById("hide").style.display="none";
+			document.getElementById("show").style.display="block";
+			}
+		}
 		};
 	const show=() =>{
+		if(w>414){
 			$(".m-t").show(0);
 			document.getElementById("menu").style.width="34%";
 			document.getElementById("content").style.width="64%";	
 			document.getElementById("hide").style.display="block";
 			document.getElementById("show").style.display="none";
+		}
+		else{
+			$(".m-t").show(0);
+			document.getElementById("menu").style.width="100%";
+			document.getElementById("content").style.width="100%";	
+			document.getElementById("hide").style.display="block";
+			document.getElementById("show").style.display="none";
+		}	
+	};
+	const scre = ()=> {
+		alert($(window).width());
 	};
 </script>
 <title>nguphap2 copy</title>
 </head>
 <body>
+	<button onclick="scre()">Get</button>
 	<div class="header" id="header">
 		<div class="main-title">
 			<h1>NGỮ PHÁP CHỦ ĐIỂM 2</h1>
