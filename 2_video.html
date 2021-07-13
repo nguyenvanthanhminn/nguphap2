@@ -1,0 +1,488 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Favicon-->
+<link rel="apple-touch-icon" sizes="180x180" href="https://nguyenvanthanhminn.github.io/nguphap2/nguphapfavicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nguyenvanthanhminn.github.io/nguphap2/nguphapfavicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nguyenvanthanhminn.github.io/nguphap2/nguphapfavicon.svg">
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300);
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		overflow-x: hidden;
+	}
+	/*2 div header cung 1 hang*/
+	div.header{
+		width: 100%;
+		height: auto;
+	}
+	div.main-title{
+		float: left;
+		width: 70%;
+	}
+	div.button{
+		float: left;
+		width: 30%;
+	}
+	.header{
+		margin-top: 1.5%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	.button{
+		letter-spacing: 30%;
+	}
+	.btn{
+		padding: 8px;
+		border-radius: 4px;
+		background: blue;
+		border: none;
+		color: white;	
+	}
+	.btn:hover{
+		cursor: pointer;
+		background: red;
+	}
+	#btn1{width: 25%;}
+	#btn2{width: 28%;}
+	#btn3{width: 23%;}
+	/*2 div menu cung 1 hang*/
+	div.main{
+		width: 100%;
+		margin-top: 2.5%;
+	}
+	div.menu{
+		padding-left: 0.75%;
+		float: left;
+		width: 34.25%;
+	}
+	div.content{
+		float: left;
+		width: 64%;
+		text-align: justify;
+		padding-right: 0.5%;
+		margin-left: 0.5%;
+	}
+	table, th, td{
+		border: 0.25px solid;
+	}
+	.menu>ul{
+		line-height: 190%;
+		background: #111;
+		color: #fff;
+/*		width: 26%;*/
+		font-weight: bold;
+		font-family: 'Montserrat', 'Open Sans', sans-serif;
+		}
+	a{text-decoration: none;}
+	.menu>ul>li{
+		overflow: hidden;
+		transition: all .1s;
+	}
+	.menu>ul>li>a{
+		color: white;
+	}
+	.menu> ul > li:hover{
+		cursor: pointer;
+		background: #5fa2db;
+	}
+	.m-t{
+		margin-left: 3%;
+	}
+	#break-header{display: none;}
+	#show{display: none;padding-bottom: 3%;width: 30%;}
+	#hide{padding-bottom: 0.5%;width: 30%;}
+	#hide:hover, #show:hover{
+		cursor: pointer;
+	}
+	/*Nut hoan thanh*/
+	.complete{
+		margin-top: 80%;
+	}
+	#fi-btn{
+		background: blue;
+		color: white;
+		margin-top: 10%;
+		margin-left: 45%;
+		padding: 8px 10px 8px;	/*top (right left) bottom*/
+		border: none;
+		font-size: 110%;
+		border-radius: 4px;
+	}
+	#fi-btn:hover{
+		cursor: pointer;
+		background: purple;}
+	p.v-title{
+		font-size: 120%;
+		font-weight: bold;
+		margin: 0.5% auto 1% auto;/*top right bottom left*/
+	}
+	/*Nut back to top*/
+	#btn-top
+	{
+		display: none;
+		padding: 3px 13.5px 8px;	/*top (right left) bottom*/
+		height: 45px;
+		background: blue; 
+		color: white;
+		border-radius: 4px;
+		border: none; 
+		position: fixed; right: 2%; bottom: 10%;
+	}
+	#btn-top:hover
+	{
+		cursor: pointer;
+	}
+	/*<!--Dark mode-->*/
+	#btnlight{
+		padding: 8px;
+		background: black;
+		color: white;
+		border-radius: 4px;
+		border: none;
+	}
+	#btnlight:hover{
+		cursor: pointer;}
+	/*2 div footer cung 1 hang*/
+	div.footer{
+		margin-top: 5%;
+		width: 100%;
+	}
+	div.design{
+		padding-left: 1%;
+		padding-bottom: 0.5%;
+		float:left;
+		width: 87%;
+	}
+	div.footer-content
+	{
+		float:left;
+		padding-right: 1%;
+		padding-bottom: 0.5%;
+		width: 11%;
+	}
+	.fa{font-size: 2em;}
+	#s:hover{cursor: pointer;}
+	/*Responsive*/
+	@media only screen and (max-width: 414px)
+	{
+			/*2 div header 2 hang*/
+	div.header{
+		width: 100%;
+		height: auto;
+	}
+	div.main-title{
+		float: left;
+		width: 100%;
+	}
+		h1{	font-size: 170%;}
+		#break-header{display: block;}
+	div.button{
+		margin-top: 2%;
+		float: left;
+		width: 100%;
+	}
+		/*2 div menu 2 hang*/
+	div.main{
+		width: 100%;
+		margin-top: 14%;
+	}
+	div.menu{
+		float: left;
+		margin-left: 1%;
+		width: 90%;
+	}
+	div.break-main{
+		float: left;
+		width: 1.5%;
+	}
+	div.content{
+		margin-left: 2%;
+		margin-right: 2%;
+		width: 96%;
+	}
+		#image{width: 100%;}
+	#fi-btn{
+		background: blue;
+		color: white;
+		margin-top: 10%;
+		margin-left: 35%;
+		padding: 8px 10px 8px;	/*top (right left) bottom*/
+		border: none;
+		font-size: 110%;
+		border-radius: 4px;
+	}
+	/*Nut back to top*/
+	#btn-top
+	{
+		display: none;
+		padding: 3px 13.5px 8px;	/*top (right left) bottom*/
+		height: 45px;
+		background: blue; 
+		color: white;
+		border-radius: 4px;
+		border: none; 
+		position: fixed; right: 1%; bottom: 5%;
+	}
+/*2 div footer cung 1 hang*/
+	div.footer{
+		margin-top: 90%;
+		margin-bottom: 1%;
+		width: 100%;
+	}
+	div.design{
+		padding-left: 1%;
+		float:left;
+		width: 87%;
+	}
+	div.footer-content
+	{
+		display: none;
+	}	
+	}
+</style>
+<title>Ngữ pháp 2-2 _ video</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+<script>
+	let w = $(window).width();
+	if(w<=414){
+		alert("Sử dụng màn hình rộng hơn đưa tới trải nghiệm tối ưu hơn!\nThiết kế và code bởi MikTae, không sở hữu video trong trang này");
+	}
+		const hide=() =>{
+			if(w > 414){
+				$(".m-t").hide(0);
+			document.getElementById("menu").style.width="10%";
+			document.getElementById("content").style.width="88%";	
+			document.getElementById("hide").style.display="none";
+			document.getElementById("show").style.display="block";
+			}
+		else{
+			$(".m-t").hide(0);
+			document.getElementById("menu").style.width="30%";
+			document.getElementById("content").style.width="96%";	
+			document.getElementById("hide").style.display="none";
+			document.getElementById("show").style.display="block";
+			}
+		};
+	const show=() =>{
+		if(w>414){
+			$(".m-t").show(0);
+			document.getElementById("menu").style.width="34%";
+			document.getElementById("content").style.width="64%";	
+			document.getElementById("hide").style.display="block";
+			document.getElementById("show").style.display="none";
+		}
+		else{
+			$(".m-t").show(0);
+			document.getElementById("menu").style.width="90%";
+			document.getElementById("content").style.width="96%";	
+			document.getElementById("hide").style.display="block";
+			document.getElementById("show").style.display="none";
+		}	
+	};
+	const scre = ()=> {
+		alert(w);
+	};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body id="b">
+<!--<button onclick="scre()">Get</button>-->
+	<div class="header" id="header">
+		<div class="main-title">
+			<h1>NGỮ PHÁP CHỦ ĐIỂM 2</h1>
+		</div><div id="break-header"><br/></div>
+		<div class="button">
+			<button class="btn" id="btn1">Home</button>&emsp;
+			<button class="btn" id="btn2">Video giảng</button>&emsp;
+			<button class="btn" id="btn3">Contact</button>
+		</div>
+	</div>
+	<br/>
+	<div class="main">
+		<div class="menu" id="menu">
+			<ul id="un-list" class="un-list">
+		<div style="padding-left:1.5%;padding-top: 1%;"><span id="show" onclick="show()" class="fa fa-bars"></span><span id="hide" onclick="hide()" class="fa fa-minus"></span></div>
+		<li id="les1">
+			<a href="#">&ensp;Buổi 1<br/><span  class="m-t">Tiếng Anh: Thì quá khứ tiếp diễn, hiện tại tiếp diễn</span></a>
+		</li>
+		<li id="les2">
+			<a href="#">&ensp;Buổi 2<br/><span  class="m-t"> Tiếng Anh: Quá khứ đơn; Tiếng hàn: cách nói quá khứ </span></a>
+		</li>
+		<li id="les3">
+			<a href="#">&ensp;Buổi 3<br/><span  class="m-t"> Tiếng Hàn: 여기, 거기, 저기; 이것, 그것, 저것</span></a>
+		</li>
+		<li id="les4">
+			<a href="#" >&ensp;Buổi 4<br/><span  class="m-t"> Tiếng Hàn: 에; 지말다; 아/ 어도 되다</span> </a>
+		</li>
+		<li id="les5">
+			<a href="#">&ensp;Buổi 5<br/><span  class="m-t"> Tiếng Anh và Hàn: Cách nói nguyên nhân</span></a>
+		</li>
+	</ul>
+		</div>
+		<div class="content" id="content">
+			<div class="darkmode">
+				<button id="btnlight" onclick="Dark()">{{message}}</button>
+			</div>
+			<!--Ham dark theme-->
+			<script language="javascript">
+				var b= document.getElementById("b");
+				//Vuejs
+						var dl= new Vue({
+								el: '#btnlight',
+								data:{
+									message: "Dark mode: OFF "
+								}
+							});
+				var light= 1;
+				const Dark =()=>
+				{
+					if(light == 1){
+						dl.message="Dark mode: ON";
+						light = 0;
+						b.style.background= "black";
+						b.style.color= "white";
+					}
+					else{
+						dl.message="Dark mode: OFF";
+						light = 1;
+						b.style.background= "white";
+						b.style.color= "black";
+					}
+				};
+			</script>
+			<div id="1">
+				<p class="v-title" id="v-t-1">{{message}}</p>
+					<iframe id="iframe1" width="90%" height="480" src="https://www.youtube.com/embed/CuklIb9d3fI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<p class="v-title" id="v-t-2">{{message}}</p>
+					<iframe id="iframe2" width="90%" height="480" src="https://www.youtube.com/embed/CuklIb9d3fI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<script>
+					//Vuejs phai su dung sau phan tu
+					var videotitle1= new Vue({
+								el: '#v-t-1',
+								data:{
+									message: "Quá khứ tiếp diễn",
+								}
+					});
+					var videotitle2= new Vue({
+									el: '#v-t-2',
+									data:{
+										message: "Hiện tại tiếp diễn"
+									}
+					});
+				// Doi src iframe- Bat buoc theo cu phap http://www.youtube.com/embed/idvideo?enablejsapi=1
+					var i1= document.getElementById("iframe1");
+					var i2= document.getElementById("iframe2");
+					var u=1;
+					let le1 =document.getElementById("les1");
+					let le2 =document.getElementById("les2");
+					let le3 =document.getElementById("les3");
+					let le4 =document.getElementById("les4");
+					let le5 =document.getElementById("les5");
+					let fin=document.getElementById("fi-btn");
+					le1.onclick = function show1(){
+						u=1;
+						videotitle1.message= "Quá khứ tiếp diễn";
+						videotitle2.message= "Hiện tại tiếp diễn";
+						i1.src="http://www.youtube.com/embed/CuklIb9d3fI?enablejsapi=1";
+						i2.src="http://www.youtube.com/embed/CuklIb9d3fI?enablejsapi=1";
+							}
+					le2.onclick= function show2(){
+						u=2;
+						videotitle1.message= "Quá khứ đơn";
+						videotitle2.message= "Cách nói quá khứ trong tiếng Hàn";
+						i1.src="http://www.youtube.com/embed/WMweEpGlu_U?enablejsapi=1";
+						i2.src="http://www.youtube.com/embed/WMweEpGlu_U?enablejsapi=1";
+					}
+					le3.onclick= function show3(){
+						u=3;
+						videotitle1.message= "여기, 거기, 저기";
+						videotitle2.message= "이것, 그것, 저것";
+						i1.src="http://www.youtube.com/embed/gdZLi9oWNZg?enablejsapi=1";
+						i2.src="http://www.youtube.com/embed/gdZLi9oWNZg?enablejsapi=1";
+					}
+					le4.onclick= function show4(){
+						u=4;
+						videotitle1.message= "지말다";
+						videotitle2.message= "아/ 어되다";
+						i1.src="http://www.youtube.com/embed/ErTgtL1Tjns?enablejsapi=1";
+						i2.src="http://www.youtube.com/embed/ErTgtL1Tjns?enablejsapi=1";
+					}
+					le5.onclick= function show5(){
+						u=5;
+						videotitle1.message= "Nguyên nhân trong tiếng Anh";
+						videotitle2.message= "Nguyên nhân trong tiếng Hàn";
+						i1.src="http://www.youtube.com/embed/WMweEpGlu_U?enablejsapi=1";
+						i2.src="http://www.youtube.com/embed/WMweEpGlu_U?enablejsapi=1";
+					}
+					const Fin=() =>{
+							if(u<5){
+								alert("Đang ở buổi " +u +", chưa hoàn thành ngữ pháp 2");
+
+							}
+							else{
+							var o = prompt("Về trang chủ (nhập Home) hay đến bài tiếp theo (mặc định)? ","Đến bài tiếp theo");
+									if(o == "Home"){
+										open("https://nguyenvanthanhminn.wixsite.com/list2","_self");
+									}
+									else {
+										open("https://nguyenvanthanhminn.wixsite.com/grammar3","_self");
+									}
+							}
+						};
+					const social =()=>{
+					open("https://www.facebook.com/mik.tae.7/","_self");
+				};
+			</script>
+		</div>
+	</div>
+<br/>
+	<div class="complete">
+		<button id="fi-btn" onclick="Fin()">Hoàn thành</button>
+	</div>
+	<div class="backtop">
+		<button id="btn-top" onclick="backtop()" class="fa fa-angle-up"><a href="#header"></a></button>
+	</div>
+<script>
+	 //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
+    window.onscroll = function() {scrollFunction()};
+    // khai báo hàm scrollFunction
+    function scrollFunction() {
+        // Kiểm tra vị trí hiện tại của con trỏ so với nội dung trang
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //nếu lớn hơn 20px thì hiện button
+            document.getElementById("btn-top").style.display = "block";
+        } else {
+             //nếu nhỏ hơn 20px thì ẩn button
+            document.getElementById("btn-top").style.display = "none";
+        }
+    }
+    //gán sự kiện click cho button
+    document.getElementById('btn-top').addEventListener("click", function(){
+        //Nếu button được click thì nhảy về đầu trang
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+</script>
+	<footer>
+		<div class="footer">
+			<div class="design">
+				<p><span class="fa fa-copyright" style="font-size:110%;"></span>&ensp;<span id="site">Trang ngữ pháp</span><br/><span id="s" onclick="social()">Designed and coded by MikTae who don't own videos on this page.</span></p>
+			</div>
+			<div class="footer-content">
+				<p>Ngữ pháp 2-2</p>
+			</div>
+		</div>
+		</footer>
+</body>
+</html>
