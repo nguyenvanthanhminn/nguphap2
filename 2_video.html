@@ -77,6 +77,11 @@
 		padding-right: 0.5%;
 		margin-left: 0.5%;
 	}
+	/*Iframe*/
+	.ifr{
+		width: 90%;
+		height: 480px;
+	}
 	table, th, td{
 		border: 0.25px solid;
 	}
@@ -216,6 +221,14 @@
 		margin-right: 2%;
 		width: 96%;
 	}
+	.ifr{
+		width: 80%;
+		height: 380;
+	}
+		/*Nut dark mode*/
+		#btnlight{
+			margin-top: 1%;
+		}
 		#image{width: 100%;}
 	#fi-btn{
 		background: blue;
@@ -305,9 +318,9 @@
 			<!--Ham dark theme-->
 			<div id="1">
 				<p class="v-title" id="v-t-1">{{message}}</p>
-					<iframe id="iframe1" width="90%" height="480" src="https://www.youtube.com/embed/CuklIb9d3fI?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="ifr" id="iframe1"  src="https://www.youtube.com/embed/CuklIb9d3fI?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<p class="v-title" id="v-t-2">{{message}}</p>
-					<iframe id="iframe2" width="90%" height="480" src="https://www.youtube.com/embed/CuklIb9d3fI?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="ifr" id="iframe2"  src="https://www.youtube.com/embed/CuklIb9d3fI?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
@@ -441,7 +454,7 @@ let w = $(window).width();
 									if(o == "Home"){
 										open("https://nguyenvanthanhminn.wixsite.com/list2","_self");
 									}
-									else {
+									else if(o != false){
 										open("https://nguyenvanthanhminn.wixsite.com/grammar3","_self");
 									}
 							}
