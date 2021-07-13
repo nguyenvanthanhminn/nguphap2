@@ -1,6 +1,4 @@
 // JavaScript Document
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
-<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 //Lay chieu rong man hinh
 var w = $(window).width();
 	if(w<=414){
