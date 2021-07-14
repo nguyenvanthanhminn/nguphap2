@@ -112,11 +112,29 @@
 	#hide:hover, #show:hover{
 		cursor: pointer;
 	}
-	.c-titile{
+	/*TAB*/
+	.tab{width: 100%;}
+	.c-titile1, .c-titile2{
 		font-weight: bold;
 		font-size: 140%;
 	}
-	.c-titile:hover{color:red; cursor: pointer;}
+	.c-titile1:hover, .c-titile2:hover{cursor: pointer;}
+	#title-a:hover, #title-b:hover{color:red;}
+	.wig{
+		padding-left: 7%;
+		font-size: 90%;
+		display: none;
+	}
+	.wig:hover{
+		text-decoration: underline;
+	}
+	/*Nut chuyen*/
+	.btn-mes{
+		padding: 6px 7.5px 6px;background: #E12E31; color:#FFFFFF; border:#62090B;}
+	.btn-mes:hover{
+		cursor: pointer;
+		font-weight: bold;}
+	#icon-a, #icon-b{font-size: 120%;}
 	/*Nut hoan thanh*/
 	.complete{
 		margin-top: 80%;
@@ -150,7 +168,7 @@
 	{
 		cursor: pointer;
 	}
-	#image{width: 95%;}
+	#image, #img2{width: 95%;}
 	/*2 div footer cung 1 hang*/
 	div.footer{
 		margin-top: 5%;
@@ -209,11 +227,12 @@
 		margin-right: 2%;
 		width: 96%;
 	}
-		#image{width: 100%;}
+		div.c-titile1{margin-top: 3px;}
+		#image, #img2{width: 100%;}
 	#fi-btn{
 		background: blue;
 		color: white;
-		margin-top: 10%;
+		margin-top: 5%;
 		margin-left: 35%;
 		padding: 8px 10px 8px;	/*top (right left) bottom*/
 		border: none;
@@ -250,47 +269,9 @@
 	}
 </style>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
-<script>
-	let w = $(window).width();
-		const hide=() =>{
-			if(w > 414){
-				$(".m-t").hide(0);
-			document.getElementById("menu").style.width="10%";
-			document.getElementById("content").style.width="88%";	
-			document.getElementById("hide").style.display="none";
-			document.getElementById("show").style.display="block";
-			}
-		else{
-			$(".m-t").hide(0);
-			document.getElementById("menu").style.width="30%";
-			document.getElementById("content").style.width="96%";	
-			document.getElementById("hide").style.display="none";
-			document.getElementById("show").style.display="block";
-			}
-		};
-	const show=() =>{
-		if(w>414){
-			$(".m-t").show(0);
-			document.getElementById("menu").style.width="34%";
-			document.getElementById("content").style.width="64%";	
-			document.getElementById("hide").style.display="block";
-			document.getElementById("show").style.display="none";
-		}
-		else{
-			$(".m-t").show(0);
-			document.getElementById("menu").style.width="90%";
-			document.getElementById("content").style.width="96%";	
-			document.getElementById("hide").style.display="block";
-			document.getElementById("show").style.display="none";
-		}	
-	};
-	const scre = ()=> {
-		alert(w);
-	};
-</script>
 <title>nguphap2 copy</title>
 </head>
-<body>
+<body id="body1">
 	<!--<button onclick="scre()">Get</button>-->
 	<div class="header" id="header">
 		<div class="main-title">
@@ -314,78 +295,61 @@
 			<ul id="un-list" class="un-list">
 		<div style="padding-left:1.5%;padding-top: 1%;"><span id="show" onclick="show()" class="fa fa-bars"></span><span id="hide" onclick="hide()" class="fa fa-minus"></span></div>
 		<li id="les1">
-			<a href="#">&ensp;Buổi 1<br/><span  class="m-t">Tiếng Anh: Thì quá khứ tiếp diễn, hiện tại tiếp diễn</span></a>
+			<a href="#">&ensp;Buổi 1<br/>
+				<p class="wig" id="wig1">
+					<a href="#content1">Tiếng Anh:<br/> Thì quá khứ tiếp diễn</a></p>
+				<p class="wig" id="wig2">
+					<a href="#content2">Tiếng Anh:<br/> Thì hiện tại tiếp diễn</a></p>
+				<span  class="m-t">Tiếng Anh: Thì quá khứ tiếp diễn, hiện tại tiếp diễn</span>
+			</a>
 		</li>
 		<li id="les2">
-			<a href="#">&ensp;Buổi 2<br/><span  class="m-t"> Tiếng Anh: Quá khứ đơn; Tiếng hàn: cách nói quá khứ </span></a>
+			<a href="#">&ensp;Buổi 2<br/>
+				<p class="wig" id="wig3">
+					<a href="#content3">Tiếng Anh:<br/> Quá khứ đơn</a></p>
+				<p class="wig" id="wig4">
+					<a href="#content4">Tiếng Hàn:<br/>cách nói quá khứ </a></p>
+				<span  class="m-t"> Tiếng Anh: Quá khứ đơn; Tiếng Hàn: cách nói quá khứ </span>
+			</a>
 		</li>
 		<li id="les3">
-			<a href="#">&ensp;Buổi 3<br/><span  class="m-t"> Tiếng Hàn: 여기, 거기, 저기; 이것, 그것, 저것</span></a>
+			<a href="#">&ensp;Buổi 3<br/>
+				<p class="wig" id="wig5">
+					<a href="#content5">Tiếng Hàn:<br/> 여기, 거기, 저기</a></p>
+				<p class="wig" id="wig6">
+					<a href="#content6">Tiếng Hàn:<br/>이것, 그것, 저것 </a></p>
+				<span  class="m-t"> Tiếng Hàn: 여기, 거기, 저기; 이것, 그것, 저것</span>
+			</a>
 		</li>
 		<li id="les4">
-			<a href="#" >&ensp;Buổi 4<br/><span  class="m-t"> Tiếng Hàn: 에; 지말다; 아/ 어도 되다</span> </a>
+			<a href="#" >&ensp;Buổi 4<br/>
+				<p class="wig" id="wig7">
+					<a href="#content7">Tiếng Hàn:<br/> 에; 지말다;</a></p>
+				<p class="wig" id="wig8">
+					<a href="#content8">Tiếng Hàn:<br/> 아/ 어도 되다 </a></p>
+				<span  class="m-t"> Tiếng Hàn: 에; 지말다; 아/ 어도 되다</span>
+			</a>
 		</li>
 		<li id="les5">
-			<a href="#">&ensp;Buổi 5<br/><span  class="m-t"> Tiếng Anh và Hàn: Cách nói nguyên nhân</span></a>
+			<a href="#">&ensp;Buổi 5<br/>
+				<p class="wig" id="wig9">
+					<a href="#content9">Tiếng Anh:<br/>  Cách nói nguyên nhân</a></p>
+				<p class="wig" id="wig10">
+					<a href="#content10">Tiếng Hàn:<br/>  Cách nói nguyên nhân</a></p>
+				<span  class="m-t"> Tiếng Anh và Hàn: Cách nói nguyên nhân</span>
+			</a>
 		</li>
 	</ul>
 		</div>
-		<script>
-			var u=1;
-			let le1 =document.getElementById("les1");
-			let le2 =document.getElementById("les2");
-			let le3 =document.getElementById("les3");
-			let le4 =document.getElementById("les4");
-			let le5 =document.getElementById("les5");
-			let fin=document.getElementById("fi-btn");
-			
-			le1.onclick = function show1(){
-				u=1;
-				$("#1").show(0);
-				$("#2, #3, #4, #5").hide(0);
-			}
-			le2.onclick= function show2(){
-				u=2;
-				$("#2").show(0);
-				$("#1, #3, #4, #5").hide(0);
-			}
-			le3.onclick= function show3(){
-				u=3;
-				$("#3").show(0);
-				$("#2, #1, #4, #5").hide(0);
-			}
-			le4.onclick= function show4(){
-				u=4;
-				$("#4").show(0);
-				$("#2, #3, #1, #5").hide(0);
-			}
-			le5.onclick= function show5(){
-				u=5;
-				$("#5").show(0);
-				$("#2, #3, #4, #1").hide(0);
-			}
-			const Fin=() =>{
-				if(u<5){
-					alert("Đang ở buổi " +u +", chưa hoàn thành ngữ pháp 2");
-					
-				}
-				else{
-				var o = prompt("Về trang chủ (nhập Home) hay đến bài tiếp theo (mặc định)? ","Đến bài tiếp theo");
-						if(o == "Home"){
-							open("https://nguyenvanthanhminn.wixsite.com/list2","_self");
-						}
-						else {
-							open("https://nguyenvanthanhminn.wixsite.com/grammar3","_self");
-						}
-				}
-			};
-	const social = ()=>{
-		open("https://www.facebook.com/mik.tae.7/","_self");
-	};
-		</script>
 		<div class="content" id="content">
 			<div id="1">
-				<div class="c-titile">A. Thì quá khứ tiếp diễn</div>
+				<div id="content1">
+				<div class="c-titile1" onclick="Cont1">
+					<span id="title-a">A. Thì quá khứ tiếp diễn</span>
+					<button class="btn-mes">
+						<a style="font-size: 110%;" href="#content2">Phần B</a>
+						<span id="icon-a" class="fa fa-caret-right"></span>
+					</button></div>
 				<div style="font-size: 130%;">
 					<p style="font-weight: bold; text-align: justify;">
 						A.1 Khái niệm:
@@ -483,7 +447,162 @@
 						</p>
 					</p>
 				</div>
-				<div class="c-titile">B. Thì hiện tại tiếp diễn</div>
+			</div>
+		<div id="content2">
+			<div class="c-titile2" onclick="Cont2">
+					<span id="title-b">B. Thì hiện tại tiếp diễn</span>
+					<button class="btn-mes">
+						<span id="icon-b" class="fa fa-caret-left"></span>
+						<a style="font-size: 110%;" href="#content1">Phần A</a>
+					</button></div>
+				<div style="font-size: 130%">
+					<p style="font-weight: bold; text-align: justify;">
+						B.1 Khái niệm:
+					</p>
+					<p style="text-align: justify;">Thì hiện tại tiếp diễn (Present continuous tense) dùng để diễn tả những sự việc xảy ra ngay lúc chúng ta nói hay xung quanh thời điểm chúng ta nói, và hành động đó vẫn chưa chấm dứt (còn tiếp tục diễn ra).</p>
+					<p style="font-weight: bold; text-align: justify;">
+						B.2 Công thức:
+					</p>
+					<p style="text-align: justify;">
+						a. Câu khẳng định:<br/>
+						Cấu trúc: S + am/ is/ are + V-ing<br/>Trong đó: S (subject): chủ ngữ; V-ing: động từ thêm “-ing”<br/>Lưu ý: Chủ ngữ(S) là I + am<br/>Khi S là He/ She/ It/ danh từ số ít/ danh từ không đếm được + is<br/>Còn khi S là We/ You/ They/ Danh từ số nhiều + are<br/>
+						Cách viết tắt: I am V-ing= I<sup>'</sup>m V-ing;<br/> He/ She/ It... is V-ing= He<sup>'</sup>s/ She<sup>'</sup>s/ It<sup>'</sup>s... V-ing;<br/> We/ You/ They... are V-ing= We<sup>'</sup>re/ You <sup>'</sup>re/ They <sup>'</sup>re... V-ing.<br/>
+						Ví dụ:<br/>
+						<ol style="padding-left: 5%;">
+							<li>I am writing this website.</li>
+							<li>She is cooking right now.</li>
+						</ol>
+						b. Câu phủ định:<br/>
+						Cấu trúc:  S + am/ is/ are + not + V-ing<br/>
+					Lưu ý: am not không có thể viết tắt; isn’t= is not; aren’t= are not.<br/>
+					Ví dụ:<br/>
+					<ol style="padding-left: 5%;">
+							<li>It isn’t raining.</li>
+							<li>He isn’t watching TV now..</li>
+						</ol>
+					c. Câu nghi vấn:<br/>
+					Yes/ No question<br/>
+					Cấu trúc: Am/ Is/ Are + S + V-ing?<br/>
+					Trả lời:<br/>
+					Đồng ý: Yes, S + am/ is/ are<br/>Không đồng ý: No, S + am/ is/ are+ not.<br/>
+					Ví dụ:<br/>
+					<ol style="padding-left: 5%;">
+							<li>Are you enjoying the party?_ Yes, I am.</li>
+							<li>Is he studying English?_Yes, he is.</li>
+						</ol>
+					Wh- question<br/>
+					Cấu trúc: Wh-word + am/ is/ are + (not) + S + V-ing?<br/>
+					Trả lời:
+					tùy tình huống đưa ra câu trả lời cụ thể.<br/>
+					Ví dụ:<br/>
+					<ol style="padding-left: 5%;">
+							<li>What are you doing?</li>
+							<li>What's going on?</li>
+						</ol>
+					<p style="font-weight: bold; text-align: justify;">
+						B.3 Cách sử dụng:
+					</p>
+					<p style="text-align: justify;line-height: 125%;">
+						<ul>
+							<li>
+								Diễn đạt một hành động đang xảy ra tại thời điểm nói
+							</li>
+							Ví dụ:<br/>
+						<ol style="padding-left: 5%;">
+							<li>He's working right now.</li>
+							<li>We are watching Youtube now. </li>
+						</ol>
+							<li>
+								Diễn đạt một hành động đang xảy ra không nhất thiết tại thời điểm nói.
+							</li>
+							Ví dụ:<br/>
+						<ol style="padding-left: 5%;">
+							<li> My friend is quite busy these days. He is doing his assignment.</li>
+							<li>He is reading "Gone with the wind". </li>
+						</ol>
+							<li>
+								Diễn đạt một hành động sắp xảy ra trong tương lai gần. Thường diễn tả một kế hoạch đã được lên lịch sẵn hoặc sự kiện có dấu hiệu báo trước.
+							</li>
+							Ví dụ:<br/>
+						<ol style="padding-left: 5%;">
+							<li>She's flying to Tokyo tomorrow.</li>
+							<li>What are you doing next week? </li>
+						</ol>
+							<li>
+								Diễn tả hành động thường xuyên lặp đi lặp lại, gây sự bực mình hay khó chịu cho người nói, Cách dùng này được dùng với trạng từ “always, continually”
+							</li>
+							Ví dụ:<br/>
+						<ol style="padding-left: 5%;">
+							<li>She is always coming late.</li>
+							<li>They are always arguing.</li>
+						</ol>
+							<li>
+								Diễn tả một cái gì mới, phát triển hơn hoặc đối lập với tình trạng trước đó
+							</li>
+							Ví dụ:<br/>
+						<ol style="padding-left: 5%;">
+							<li>The population of the world is increasing very fast.</li>
+							<li>Your Korean is improving.</li>
+							<li>These days most people are using Messenger instead of writing letters.</li>
+							<li>What sort of clothes are teenagers wearing nowadays?</li>
+						</ol>
+						</ul>
+					</p>
+					<p style="font-weight: bold; text-align: justify;">
+						B.4 Dấu hiệu nhận biết:
+					</p>
+					<p style="text-align: justify;line-height: 125%;">
+						Trạng từ chỉ thời gian:
+						<ul>
+							<li>Now: Bây giờ</li>
+							<li>Right now: Ngay bây giờ</li>
+							<li>At the moment: Ngay lúc này</li>
+							<li>At present: Hiện tại</li>
+							<li>At + giờ cụ thể</li>
+						</ul>
+				Ví dụ:<br/>
+						<ol style="padding-left: 5%;">
+							<li>It is raining now.</li>
+							<li>He's not listening to music at the moment.</li>
+						</ol>
+					Trong câu có từ:
+						<ul>
+							<li>Look!/ Watch! (Nhìn kìa!)</li>
+							<li>Listen! (Nghe này!)</li>
+							<li>Keep silent! (Hãy im lặng)</li>
+							<li>Watch out! = Look out! (Coi chừng)</li>
+						</ul>
+				Ví dụ:<br/>
+						<ol style="padding-left: 5%;">
+							<li>Look! The train is coming.</li>
+							<li>Keep silent! The baby is sleeping.</li>
+						</ol>
+					</p>
+					<p style="font-weight: bold; text-align: justify;">
+						B.5 Cách thêm ing:
+					</p>
+					<p style="text-align: justify;line-height: 125%;">
+						V-ing là gì?  - V là verb, V-ing đơn giản là động từ thêm đuôi "-ing".<br/>Trong Tiếng Anh, người ta quy ước: động từ + ing = đang diễn ra hành động đó.<br/>Ví dụ:<br/>drink: uống<br/> drinking: đang uống. <br/>I am drinking water. (Tôi đang uống nước).<br/>
+						<ol style="padding-left: 5%;">
+							<li>Với các từ có tận cùng là “e”, khi chuyển sang dạng ing thì sẽ bỏ đuôi “e” và thêm “ing” luôn. (use – using; pose – posing; improve – improving; change – changing)</li>
+							<li>Với các từ có tận cùng là “ee” khi chuyển sang dạng ing thì VẪN GIỮ NGUYÊN “ee” và thêm đuôi “ing”. (knee – kneeing)</li>
+							- Quy tắc gấp đôi phụ âm rồi mới thêm ing:<br/>
+							<li>Nếu động từ có 1 âm tiết kết thúc bằng một phụ âm (trừ h, w, x, y), đi trước là một nguyên âm ta gấp đôi phụ âm trước khi thêm “ing". (stop – stopping; run – running)</li>
+							<li> Với động từ hai âm tiết trở lên, nếu trọng âm nhấn vào âm cuối thì mới gấp đôi phụ âm. (begin – beginning</li>
+							<li>Nếu phụ âm kết thúc là "l" thì thường người Anh sẽ gấp đôi l còn người Mỹ thì không.<br/>Ví dụ: Travel  : Anh - Anh là Travelling, Anh - Mỹ là Traveling, cả hai cách viết đều sử dụng được nhé.</li>
+							<li>Động từ kết thúc là “ie”, thay “ie” vào “y” rồi thêm “ing”. (lie – lying; die – dying)</li>
+						</ol>
+Những động từ không chia ở Hiện tại tiếp diễn:
+Lưu ý: Có một số động từ không dùng ở thể tiếp diễn như like, want, need...- chủ yếu các động từ chỉ cảm giác, trạng thái.<br/>
+Ví dụ:<br/>
+- I like this book. (đúng)<br/>
+- I’m liking this book. (sai)<br/>
+Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/>
+<img id="img2" src="nguphap2/nguphap2-2-1-2.PNG" alt="dongtukhongdivoiing"/>
+					</p>
+					</p>
+				</div><br/>
+</div>
 			</div>
 			<div id="2" style="display: none">B2</div>
 			<div id="3" style="display: none">B3</div>
@@ -493,12 +612,154 @@
 	</div>
 <br/>
 	<div class="complete">
-		<button id="fi-btn" onclick="Fin()">Hoàn thành</button>
+		<button id="fi-btn" onclick="Fin()"><a v-bind:href="url" style="font-size: 110%;" id="fi-btn-a" class="testlink">{{message}}</a></button>
 	</div>
 	<div class="backtop">
 		<button id="btn-top" onclick="backtop()" class="fa fa-angle-up"><a href="#header"></a></button>
 	</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <script>
+			var u=1, an = 0, flow=0;
+			let le1 =document.getElementById("les1");
+			let le2 =document.getElementById("les2");
+			let le3 =document.getElementById("les3");
+			let le4 =document.getElementById("les4");
+			let le5 =document.getElementById("les5");
+			let body1=document.getElementById("body1");
+			// Vuejs
+			var complete= new Vue({
+								el: '#fi-btn-a',
+								data:{
+									message: "Kiểm tra buổi "+ u,
+									url: "#1"
+								}
+					});
+			le1.onclick = function show1(){
+				u=1;
+				$("#1").show(0);
+				$("#2, #3, #4, #5").hide(0);
+				complete.message= "Kiểm tra buổi "+ u;
+				complete.url= "#1";
+			}
+			le2.onclick= function show2(){
+				u=2;
+				$("#2").show(0);
+				$("#1, #3, #4, #5").hide(0);
+				complete.message= "Kiểm tra buổi "+ u;
+				complete.url= "#2";
+			}
+			le3.onclick= function show3(){
+				u=3;
+				$("#3").show(0);
+				$("#2, #1, #4, #5").hide(0);
+				complete.message= "Kiểm tra buổi "+ u;
+				complete.url= "#3";
+			}
+			le4.onclick= function show4(){
+				u=4;
+				$("#4").show(0);
+				$("#2, #3, #1, #5").hide(0);
+				complete.message= "Kiểm tra buổi "+ u;
+				complete.url= "#4";
+			}
+			le5.onclick= function show5(){
+				u=5;
+				$("#5").show(0);
+				$("#2, #3, #4, #1").hide(0);
+				complete.message= "Hoàn thành";
+				complete.url= "#5";
+			}
+			body1.onkeydown= function Keydown(event){
+				if(event.key == "Control"){
+					alert("Nhấn phím bất kỳ trừ Ctrl để ẩn thanh ngang");
+					body1.style.overflowX="scroll";
+				}
+				else{
+					alert("Gõ Ctrl để hiện thanh ngang");
+					body1.style.overflowX="hidden";
+				}
+			}
+			const social = ()=>{
+		open("https://www.facebook.com/mik.tae.7/","_self");
+	};
+		let w = $(window).width();
+		const hide=() =>{
+			an = 1;
+			if(w > 414){
+				$(".m-t").hide(0);
+			document.getElementById("menu").style.width="10%";
+			document.getElementById("content").style.width="88%";	
+			document.getElementById("hide").style.display="none";
+			document.getElementById("show").style.display="block";
+			}
+		else{
+			$(".m-t").hide(0);
+			document.getElementById("menu").style.width="30%";
+			document.getElementById("content").style.width="96%";
+			document.getElementById("hide").style.display="none";
+			document.getElementById("show").style.display="block";
+			}
+		};
+	const show=() =>{
+		an = 0;
+		if(w>414){
+			$(".m-t").show(0);
+			document.getElementById("menu").style.width="34%";
+			document.getElementById("content").style.width="64%";	
+			document.getElementById("hide").style.display="block";
+			document.getElementById("show").style.display="none";
+		}
+		else{
+			$(".m-t").show(0);
+			document.getElementById("menu").style.width="90%";
+			document.getElementById("content").style.width="96%";	
+			document.getElementById("hide").style.display="block";
+			document.getElementById("show").style.display="none";
+		}	
+	};
+	le1.onmouseover= function hover(){
+		if (an==1){
+			$("#wig1, #wig2").show()
+		}
+	}
+	le2.onmouseover= function hover(){
+		if (an==1){
+			$("#wig3, #wig4").show()
+		}
+	}
+	le3.onmouseover= function hover(){
+		if (an==1){
+			$("#wig5, #wig6").show()
+		}
+	}
+	le4.onmouseover= function hover(){
+		if (an==1){
+			$("#wig7, #wig8").show()
+		}
+	}
+	le5.onmouseover= function hover(){
+		if (an==1){
+			$("#wig9, #wig10").show()
+		}
+	}
+	le1.onmouseout= function hover(){
+			$("#wig1, #wig2").hide()
+	}
+	le2.onmouseout= function hover(){
+			$("#wig3, #wig4").hide()
+	}
+	le3.onmouseout= function hover(){
+			$("#wig5, #wig6").hide()
+	}
+	le4.onmouseout= function hover(){
+			$("#wig7, #wig8").hide()
+	}
+	le5.onmouseout= function hover(){
+			$("#wig9, #wig10").hide()
+	}
+	const scre = ()=> {
+		alert(w);
+	};
 	 //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
     window.onscroll = function() {scrollFunction()};
     // khai báo hàm scrollFunction
