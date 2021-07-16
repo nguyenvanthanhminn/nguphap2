@@ -112,6 +112,11 @@
 	#hide:hover, #show:hover{
 		cursor: pointer;
 	}
+	/*Từ điển*/
+	div#diction{
+		position: fixed;
+		top: 72%;
+	}
 	/*TAB*/
 	.tab{width: 100%;}
 	.c-titile1, .c-titile2{
@@ -188,6 +193,7 @@
 		width: 11%;
 	}
 	.fa{font-size: 2em;}
+	.fa-search:hover{cursor: pointer;}
 	#s:hover{cursor: pointer;}
 	/*Responsive*/
 	@media only screen and (max-width: 414px)
@@ -228,6 +234,7 @@
 		width: 96%;
 	}
 		div.c-titile1{margin-top: 3px;}
+		#diction{display: none;}
 		#image, #img2{width: 100%;}
 	#fi-btn{
 		background: blue;
@@ -268,11 +275,33 @@
 	}	
 	}
 </style>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <title>nguphap2 copy</title>
 </head>
 <body id="body1">
 	<!--<button onclick="scre()">Get</button>-->
+	<div id="diction">
+		<form action="https://dictionary.cambridge.org/search/english/direct/?utm_source=widget_searchbox_source&utm_medium=widget_searchbox&utm_campaign=widget_tracking" method="get" target="print_popup" onsubmit="open('about:blank','print_popup','width=400,height=490');">
+			<table style="font-size:120%;background:#292929;border-collapse:collapse;border-spacing:0;width:40%;"> 
+				<tbody>
+					<tr>
+						<td colspan="3" style="padding:0;background:none;border:none;">
+							<a href="https://dictionary.cambridge.org/" style="display:block; background: transparent url(https://dictionary.cambridge.org/external/images/freesearch/sbl.png?version=5.0.177) no-repeat 5px 6px;height:32px;"></a> 
+						</td> 
+					</tr>
+					<tr> 
+						<td style="width:73%;background:none;border:none;padding:4px;">
+							<input style="width:100%;display:block;font-size:95%;padding:2px;border:none;" name="q" />
+						</td> 
+						<td style="border:none" width="2%"></td>
+						<td style="width:25%;background:none;border:none;padding:0 4px 0 0;">
+							<button class="fa fa-search" style="width:100%;display:block;font-size:100%;padding:2px;border:none;float:right;background:#d0a44c;" type="submit"></button>
+						</td> 
+					</tr> 
+				</tbody>
+			</table> 
+		</form>
+	</div>
 	<div class="header" id="header">
 		<div class="main-title">
 			<h1>NGỮ PHÁP CHỦ ĐIỂM 2</h1>
@@ -598,7 +627,7 @@ Ví dụ:<br/>
 - I like this book. (đúng)<br/>
 - I’m liking this book. (sai)<br/>
 Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/>
-<img id="img2" src="https://nguyenvanthanhminn.github.io/nguphap2/nguphap2-2-1-2.PNG" alt="dongtukhongdivoiing"/>
+<img id="img2" src="nguphap2/nguphap2-2-1-2.PNG" alt="dongtukhongdivoiing"/>
 					</p>
 					</p>
 				</div><br/>
@@ -612,14 +641,14 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 	</div>
 <br/>
 	<div class="complete">
-		<button id="fi-btn" onclick="Fin()"><a v-bind:href="url" style="font-size: 110%;" id="fi-btn-a" class="testlink">{{message}}</a></button>
+		<button id="fi-btn" onclick="Fin()">{{message}}</button>
 	</div>
 	<div class="backtop">
-		<button id="btn-top" onclick="backtop()" class="fa fa-angle-up"><a href="#header"></a></button>
+		<button id="btn-top" class="fa fa-angle-up"><a href="#header"></a></button>
 	</div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <script>
-			var u=1, an = 0, flow=0;
+     		var u=1, an = 0, flow=0;
 			let le1 =document.getElementById("les1");
 			let le2 =document.getElementById("les2");
 			let le3 =document.getElementById("les3");
@@ -628,10 +657,10 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 			let body1=document.getElementById("body1");
 			// Vuejs
 			var complete= new Vue({
-								el: '#fi-btn-a',
+								el: '#fi-btn',
 								data:{
 									message: "Kiểm tra buổi "+ u,
-									url: "#1"
+									url: "https://www.autoproctor.co/tests/start-test/Sz6MzDnZDf"
 								}
 					});
 			le1.onclick = function show1(){
@@ -639,7 +668,7 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 				$("#1").show(0);
 				$("#2, #3, #4, #5").hide(0);
 				complete.message= "Kiểm tra buổi "+ u;
-				complete.url= "#1";
+				complete.url= "https://www.autoproctor.co/tests/start-test/Sz6MzDnZDf";
 			}
 			le2.onclick= function show2(){
 				u=2;
@@ -669,13 +698,19 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 				complete.message= "Hoàn thành";
 				complete.url= "#5";
 			}
+			const Fin=()=>{
+			var conf= confirm("Yêu cầu khi làm bài kiểm tra:\n1. Đối với Iphone/ Ipad: dùng Safari phiên bản 13 trở lên; với Window, Android, Macbook, ... dùng Google Chrome: phiên bản 83 trở lên để đạt tối ưu nhất\n2. Click vào nút Submit- màu tím sau đó click vào nút Click after submitting test- màu xanh để không mất dữ liệu\n3. Đăng xuất khỏi mọi tài khoản Google không hợp lệ và chỉ dùng một tài khoản Google duy nhất trên trình duyệt\n 4. Mọi hành vi gian lận như chuyển tab, đăng xuất nhiều thiết bị, không hiện mặt,...  sẽ bị phát hiện!" );
+			if(conf == true){
+				open(complete.url,"_blank","location: 0");
+			}
+			};
 			body1.onkeydown= function Keydown(event){
-				if(event.key == "Control"){
-					alert("Nhấn phím bất kỳ trừ Ctrl để ẩn thanh ngang");
+				if(event.key == "o"){
+					alert("Nhấn phím e để ẩn thanh ngang");
 					body1.style.overflowX="scroll";
 				}
-				else{
-					alert("Gõ Ctrl để hiện thanh ngang");
+				else if(event.key == "e"){
+					alert("Nhấn phím o để hiện thanh ngang");
 					body1.style.overflowX="hidden";
 				}
 			}
@@ -683,6 +718,9 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 		open("https://www.facebook.com/mik.tae.7/","_self");
 	};
 		let w = $(window).width();
+/*		if(w>414){
+			alert("Để hiện thanh ngang, nhấn phím o");
+		}*/
 		const hide=() =>{
 			an = 1;
 			if(w > 414){
@@ -768,7 +806,8 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             //nếu lớn hơn 20px thì hiện button
             document.getElementById("btn-top").style.display = "block";
-        } else {
+        }
+		else {
              //nếu nhỏ hơn 20px thì ẩn button
             document.getElementById("btn-top").style.display = "none";
         }
