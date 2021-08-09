@@ -1095,13 +1095,13 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 						</div>
 						<div class="noidung">
 						<audio class="audioplay" id="au31" controls>
-							<source src="nguphap2/Audio/yeogi.mp3" >
+							<source src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/yeogi.mp3.mp3" >
 						</audio>
 						<audio class="audioplay" id="au32" controls>
-							<source src="nguphap2/Audio/koki.mp3" >
+							<source src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/koki.mp3" >
 						</audio>
 						<audio class="audioplay" id="au33" controls>
-							<source src="nguphap2/Audio/choki.mp3" >
+							<source src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/choki.mp3" >
 						</audio>
 						<p class="T">Là các đại từ chỉ vị trí trong không gian</p>
 						<p class="normal">
@@ -1127,13 +1127,13 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 				</div>
 				<div id="content3-2">
 					<audio class="audioplay" id="au321" controls>
-							<source src="nguphap2/Audio/ikos.mp3" >
+							<source src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/ikos.mp3" >
 						</audio>
 						<audio class="audioplay" id="au322" controls>
-							<source src="nguphap2/Audio/kukos.mp3" >
+							<source src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/kukos.mp3" >
 						</audio>
 						<audio class="audioplay" id="au323" controls>
-							<source src="nguphap2/Audio/chokos.mp3" >
+							<source src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/chokos.mp3" >
 						</audio>
 					<div class="c-titile1">
 						<span class="title-a">B. 이것, 그것, 저것</span>
@@ -1172,10 +1172,10 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 	`<div class="title-les">BUỔI 4: K02 - 에; 지말다; 아/ 어도 되다</div>
 		<div id="content4-1">
 					<audio class="audioplay" id="au411" controls>
-							<source src="nguphap2/Audio/e.mp3" >
+							<source src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/e.mp3" >
 					</audio>
 					<audio class="audioplay" id="au412" controls>
-							<source src="nguphap2/Audio/chimalda.mp3" >
+							<source src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/chimalda.mp3" >
 					</audio>
 					<div class="c-titile1">
 						<span class="title-a">A.  에, 지말다</span>
@@ -1261,8 +1261,8 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 							<a style="font-size: 110%;" href="#content4-1">Phần A</a>
 						</button>
 			</div>
-			<audio class="audioplay" id="audio421" src="nguphap2/Audio/kwanchanda.mp3"></audio>
-			<audio class="audioplay" id="audio422" src="nguphap2/Audio/choda.mp3"></audio>
+			<audio class="audioplay" id="audio421" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/kwanchanda.mp3"></audio>
+			<audio class="audioplay" id="audio422" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/choda.mp3"></audio>
 			<div class="noidung">
 				<p class="T">Biểu hiện được dùng khi cho phép hoặc đồng ý một hành động nào đó.</p>
 				<p class="normal">Nghĩa tương đương tiếng Việt là "được(làm gì)..., làm gì cũng được".<br>
@@ -1331,13 +1331,13 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 						</button>
 					</div>
 					<div class="audioplay">
-						<audio id="audio521" src="nguphap2/Audio/because__us_1_rr.mp3"/>
-						<audio id="audio522" src="nguphap2/Audio/as__us_1_rr.mp3"/>
-						<audio id="audio523" src="nguphap2/Audio/since__us_1.mp3"/>
-						<audio id="audio524" src="nguphap2/Audio/for__us_2_rr.mp3"/>
-						<audio id="audio525" src="nguphap2/Audio/aseo.mp3"/>
-						<audio id="audio526" src="nguphap2/Audio/eoseo.mp3"/>
-						<audio id="audio527" src="nguphap2/Audio/unikka.mp3"/>
+						<audio id="audio521" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/because__us_1_rr.mp3"/>
+						<audio id="audio522" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/as__us_1_rr.mp3"/>
+						<audio id="audio523" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/since__us_1.mp3"/>
+						<audio id="audio524" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/for__us_2_rr.mp3"/>
+						<audio id="audio525" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/aseo.mp3"/>
+						<audio id="audio526" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/eoseo.mp3"/>
+						<audio id="audio527" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/unikka.mp3"/>
 					</div>
 					<div class="noidung">
 						<p class="T">A.1 Cấu trúc Because/ As/ Since/ For </p>
