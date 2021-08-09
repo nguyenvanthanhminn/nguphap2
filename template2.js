@@ -284,13 +284,13 @@ const app= Vue.createApp({
 		return{
 			audiosee: false,
 			audios: [
-				{id: "audioplay224", src: "nguphap2/Audio/hoithoainguphap224.mp3"},
-				{id: "conv2241", src: "nguphap2/Audio/conv2241.mp3"},
-				{id: "conv2242", src: "nguphap2/Audio/conv2242.mp3"},
-				{id: "conv2243", src: "nguphap2/Audio/conv2243.mp3"},
-				{id: "conv2244", src: "nguphap2/Audio/conv2244.mp3"},
-				{id: "conv2245", src: "nguphap2/Audio/conv2245.mp3"},
-				{id: "conv2246", src: "nguphap2/Audio/conv2246.mp3"}
+				{id: "audioplay224", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/hoithoainguphap224.mp3"},
+				{id: "conv2241", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2241.mp3"},
+				{id: "conv2242", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2242.mp3"},
+				{id: "conv2243", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2243.mp3"},
+				{id: "conv2244", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2244.mp3"},
+				{id: "conv2245", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2245.mp3"},
+				{id: "conv2246", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2246.mp3"}
 			],
 			buttons:[
 				{name: "Phát", id: "play224", icon: "fa fa-play-circle"},
@@ -381,13 +381,13 @@ const app= Vue.createApp({
 		return{
 			see42: false,
 			au42s: [
-				{id: "audioplay242", src: "nguphap2/Audio/conv242.mp3"},//toan bo hoi thoai
-				{id: "audioplay2421", src: "nguphap2/Audio/conv2421.mp3"},
-				{id: "audioplay2422", src: "nguphap2/Audio/conv2422.mp3"},
-				{id: "audioplay2423", src: "nguphap2/Audio/conv2423.mp3"},
-				{id: "audioplay2424", src: "nguphap2/Audio/conv2424.mp3"},
-				{id: "audioplay2425", src: "nguphap2/Audio/conv2425.mp3"},
-				{id: "audioplay2426", src: "nguphap2/Audio/conv2426.mp3"}
+				{id: "audioplay242", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv242.mp3"},//toan bo hoi thoai
+				{id: "audioplay2421", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2421.mp3"},
+				{id: "audioplay2422", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2422.mp3"},
+				{id: "audioplay2423", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2423.mp3"},
+				{id: "audioplay2424", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2424.mp3"},
+				{id: "audioplay2425", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2425.mp3"},
+				{id: "audioplay2426", src: "https://nguyenvanthanhminn.github.io/nguphap2/Audio/conv2426.mp3"}
 			],
 			buttons:[
 				{name: "Phát", id: "play242", icon: "fa fa-play-circle"},
@@ -1095,7 +1095,7 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 						</div>
 						<div class="noidung">
 						<audio class="audioplay" id="au31" controls>
-							<source src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/yeogi.mp3.mp3" >
+							<source src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/yeogi.mp3" >
 						</audio>
 						<audio class="audioplay" id="au32" controls>
 							<source src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/koki.mp3" >
@@ -1472,11 +1472,11 @@ Các động từ trong ảnh dưới đây không chia thể tiếp diễn:<br/
 			<button id="diffplay">
 				Phát nội dung
 			</button>
-			<audio style="display: none;" id="diff252" src="nguphap2/Audio/diff252.mp3" controls></audio>
-			<audio style="display: none;" id="diff2521" src="nguphap2/Audio/diff2521.mp3" controls></audio>
-			<audio style="display: none;" id="diff2522" src="nguphap2/Audio/diff2522.mp3" controls></audio>
-			<audio style="display: none;" id="diff25221" src="nguphap2/Audio/diff25221.mp3" controls></audio>
-			<audio style="display: none;" id="diff2523" src="nguphap2/Audio/diff2523.mp3" controls></audio>
+			<audio style="display: none;" id="diff252" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/diff252.mp3" controls></audio>
+			<audio style="display: none;" id="diff2521" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/diff2521.mp3" controls></audio>
+			<audio style="display: none;" id="diff2522" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/diff2522.mp3" controls></audio>
+			<audio style="display: none;" id="diff25221" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/diff25221.mp3" controls></audio>
+			<audio style="display: none;" id="diff2523" src="https://nguyenvanthanhminn.github.io/nguphap2/Audio/diff2523.mp3" controls></audio>
 		</div>
 		<div class="diff" id="diff">
 			<div class="diff1">
