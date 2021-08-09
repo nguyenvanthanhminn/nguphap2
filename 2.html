@@ -1,0 +1,1036 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Favicon-->
+<link rel="apple-touch-icon" sizes="180x180" href="https://nguyenvanthanhminn.github.io/nguphap2/nguphapfavicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nguyenvanthanhminn.github.io/nguphap2/nguphapfavicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nguyenvanthanhminn.github.io/nguphap2/nguphapfavicon.svg">
+<title>Ngữ pháp 2-2</title>
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300);
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		overflow-x: hidden;
+	}
+	/*2 div header cung 1 hang*/
+	div.header{
+		width: 100%;
+		height: auto;
+	}
+	div.main-title{
+		float: left;
+		width: 70%;
+	}
+	div.button{
+		float: left;
+		width: 30%;
+	}
+	.header{
+		margin-top: 1.5%;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	.button{
+		letter-spacing: 30%;
+	}
+	.btn{
+		padding: 8px;
+		border-radius: 4px;
+		background: blue;
+		border: none;
+		color: white;	
+	}
+	.btn:hover{
+		cursor: pointer;
+		background: red;
+	}
+	#btn1{width: 25%;}
+	#btn2{width: 28%;}
+	#btn3{width: 23%;}
+	a {
+		color: #FFFFFF;
+		font-size: 110%;
+	}
+	a:hover,a:active {
+		color: #FFFFFF;
+	}
+	/*title*/
+	.title-les{
+		font-size: 150%; margin-bottom: 5px; font-weight: bold;
+	}
+	/*2 div menu cung 1 hang*/
+	div.main{
+		width: 100%;
+		margin-top: 2.5%;
+	}
+	div.menu{
+		padding-left: 0.75%;
+		float: left;
+		width: 34.25%;
+	}
+	div.content{
+		float: left;
+		width: 64%;
+		text-align: justify;
+		padding-right: 0.5%;
+		margin-left: 0.5%;
+	}
+	table, th, td{
+		border: 0.25px solid;
+	}
+	.menu>ul{
+		line-height: 190%;
+		background: #111;
+		color: #fff;
+/*		width: 26%;*/
+		font-weight: bold;
+		font-family: 'Montserrat', 'Open Sans', sans-serif;
+		}
+	a{text-decoration: none;}
+	.menu>ul>li{
+		overflow: hidden;
+		transition: all .1s;
+	}
+	.menu>ul>li>a{
+		color: white;
+	}
+	.menu> ul > li:hover{
+		cursor: pointer;
+		background: #5fa2db;
+	}
+	.m-t{
+		margin-left: 3%;
+	}
+	#break-header{display: none;}
+	#show{display: none;padding-bottom: 3%;width: 30%;}
+	#hide{padding-bottom: 0.5%;width: 30%;}
+	.fa-volume-up{ font-size: 100%}
+	#hide:hover, #show:hover, .fa-volume-up:hover{
+		cursor: pointer;
+	}
+	/*Noi dung*/
+	.noidung{ font-size: 130%;}
+	.T{font-weight: bold; text-align: justify;}
+	.normal{text-align: justify;}
+	/*Từ điển*/
+	div#diction{
+		position: fixed;
+		top: 80%;
+	}
+	#k-dict{
+		background: #042162; color: #FFF; padding: 6px; border: none;
+	}
+	#k-dict:hover{cursor: pointer;}
+	/*TAB*/
+	.tab{width: 100%;}
+	.c-titile1, .c-titile2{
+		font-weight: bold;
+		font-size: 140%;
+	}
+	.c-titile1:hover, .c-titile2:hover{cursor: pointer;}
+	.title-a:hover, .title-b:hover{color:red;}
+	.wig{
+		padding-left: 7%;
+		font-size: 90%;
+		display: none;
+	}
+	.wig:hover{
+		text-decoration: underline;
+	}
+	/*Nut chuyen*/
+	.btn-mes{
+		padding: 6px 7.5px 6px;background: #E12E31; color:#FFFFFF; border:#62090B;}
+	.btn-mes:hover{
+		cursor: pointer;
+		font-weight: bold;}
+	#icon-a, #icon-b{font-size: 120%;}
+	/*Hoi thoai 1 conservation*/
+	table {font-family: Arial, Helvetica, sans-serif;}
+	/* The popup (background) */
+.MyConv {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+/*Popup Content */
+.popup-content {
+  position: relative;
+  background-color: #FFF;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #000000;
+  width: 100%;
+  font-size: 110%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 1.2s;
+  animation-name: animatetop;
+  animation-duration: 1.2s;
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {left:-300px; opacity:0} 
+  to {left:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {left:-300px; opacity:0}
+  to {left:0; opacity:1}
+}
+#conv:hover, #play:hover, #pause:hover, .fa-volume-up:hover, .fa-window-close:hover{cursor: pointer}
+.fa-window-close:hover,
+.fa-window-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+	.audioplay{display: none;}
+	/*Hoi thoai 2*/
+	.audiotitle{
+		line-height: 30px;
+	}
+	.audiotitle{
+		font-weight: bold;
+	}
+	.audioplay{
+		display: none;
+	}
+	.audiobreak{
+		display: none;}
+	.fa-volume-up:hover{
+		cursor: pointer;
+	}
+	#play224, #stop224, #return224{
+		padding: 3px;
+	}
+	#play224.fa-volume-up, #stop224.fa-volume-up, #return224.fa-volume-up{
+		font-size: 80%;
+	}
+	#play224, #stop224, #return224:hover{
+		cursor: pointer;
+	}	
+	#stop224, #return224{
+		margin-left: 5px;
+	}
+	#poc22, #poc32, #poc42, #poc52, #poc62, #poc72{
+		display: block;
+	}
+	/*Hoi thoai 242*/
+	.audiobtn42{
+		margin-left: 5px; padding: 4px;
+	}	
+	.audiobtn42:hover{cursor: pointer;}
+	#row422{line-height: 25px;}
+	/*Nut hoan thanh*/
+	.complete{
+		margin-top: 80%;
+	}
+	#fi-btn{
+		background: blue;
+		color: white;
+		margin-top: 10%;
+		margin-left: 45%;
+		padding: 8px 10px 8px;	/*top (right left) bottom*/
+		border: none;
+		font-size: 110%;
+		border-radius: 4px;
+	}
+	#fi-btn:hover{
+		cursor: pointer;
+		background: purple;}
+	/*Nut back to top*/
+	#btn-top
+	{
+		display: none;
+		padding: 3px 13.5px 8px;	/*top (right left) bottom*/
+		height: 45px;
+		background: blue; 
+		color: white;
+		border-radius: 4px;
+		border: none; 
+		position: fixed; right: 2%; bottom: 10%;
+	}
+	#btn-top:hover
+	{
+		cursor: pointer;
+	}
+	#image, #img2{width: 95%;}
+	/*2 div footer cung 1 hang*/
+	div.footer{
+		margin-top: 5%;
+		width: 100%;
+	}
+	div.design{
+		padding-left: 1%;
+		padding-bottom: 0.5%;
+		float:left;
+		width: 87%;
+	}
+	div.footer-content
+	{
+		float:left;
+		padding-right: 1%;
+		padding-bottom: 0.5%;
+		width: 11%;
+	}
+	.fa{font-size: 2em;}
+	.fa-search:hover{cursor: pointer;}
+	#s:hover{cursor: pointer;}
+		/*Nut dieu chinh light*/
+		.switch {
+	  position: relative;
+	  display: inline-block;
+	}
+	.switch input { 
+	  opacity: 0;
+	  width: 0;
+	  height: 0;
+	}
+	.slider {
+	  position: absolute;
+	  width: 55px;
+	  height: 26px;
+	  cursor: pointer;
+	  top: 22px;
+	  left: 110px;
+	  right: 0;
+	  bottom: 0;
+	  background-color: #ccc;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	.slider:before {
+	  position: absolute;
+	  content: "";
+	  height: 20px;
+	  width: 20px;
+	  left: 4px;
+	  bottom: 2px;
+	  top: 3px;
+	  background-color: white;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	input:checked + .slider {
+	  background-color: #2196F3;
+	}
+
+	input:focus + .slider {
+	  box-shadow: 0 0 1px #2196F3;
+	}
+
+	input:checked + .slider:before {
+	  -webkit-transform: translateX(26px);
+	  -ms-transform: translateX(26px);
+	  transform: translateX(26px);
+	}
+
+	/* Rounded sliders */
+	.slider.round {
+	  border-radius: 34px;
+	}
+
+	.slider.round:before {
+	  border-radius: 50%;
+	}
+		#diffon{
+			margin-top: 15px;
+			padding: 4px;
+			z-index: 1;
+		}
+	/*Nut doc*/
+		#diffplay, #diffclosebtn{
+			background: #F8A200; color: #FFFFFF; padding: 4px; border: none; 
+			margin: 1% auto 0 2%; /*top right bottom left*/
+		}
+		#diffplay:hover, #diffclosebtn:hover, #diffon:hover{
+			cursor: pointer;
+		}
+		.diff{
+			width: 100%;
+			margin-top: 2%;
+		}
+		.diff1{
+			margin-left: 2%;
+			width: 45%;
+			float: left;
+		}
+		.diff2{
+			margin-left: 5%;
+			margin-right: 2%;
+			width: 45%;
+			float: left;
+		}
+		.diffbreak{
+			width: 5%;
+		}
+		.difftitle{
+			background: #FF060A;
+			color: #FFFFFF;
+			text-align: center;
+			padding: 4px;
+		}
+		.diffcontent{
+			/*background: #CB7311;*/
+			border: 2px #FF8105 solid;
+			border-top: none;
+			font-weight: 500;
+		}
+		#diffmain{
+			display: none;
+			background: #FDFDFD;
+			z-index: 2;
+			width: 100%; height: 100%;
+			position: relative; top: 0; left: 0;
+		}
+		#diffcontent1{
+			padding-bottom: 50px;
+		}
+		#diffcontent2{
+			padding-bottom: 33px;
+		}
+		.diffview{
+			padding-left: 5%;
+			padding-top: 10px;
+		}
+		.diffview1{
+			padding-left: 3%;
+		}
+	/*Responsive*/
+	@media only screen and (max-width: 414px)
+	{
+			/*2 div header 2 hang*/
+	div.header{
+		width: 100%;
+		height: auto;
+	}
+	div.main-title{
+		float: left;
+		width: 100%;
+	}
+		h1{	font-size: 170%;}
+		#break-header{display: block;}
+	div.button{
+		margin-top: 2%;
+		float: left;
+		width: 100%;
+	}
+		/*2 div menu 2 hang*/
+	div.main{
+		width: 100%;
+		margin-top: 14%;
+	}
+	div.menu{
+		float: left;
+		margin-left: 1%;
+		width: 90%;
+	}
+	div.break-main{
+		float: left;
+		width: 1.5%;
+	}
+	div.content{
+		margin-left: 2%;
+		margin-right: 2%;
+		width: 96%;
+	}
+		div.c-titile1{margin-top: 3px;}
+		#diction{display: none;}
+		#image, #img2{width: 100%;}
+	#fi-btn{
+		background: blue;
+		color: white;
+		margin-top: 5%;
+		margin-left: 35%;
+		padding: 8px 10px 8px;	/*top (right left) bottom*/
+		border: none;
+		font-size: 110%;
+		border-radius: 4px;
+	}
+	/*Hoi thoai 2*/
+	.audiobreak{
+			display: block;}
+		#poc22, #poc32, #poc42, #poc52, #poc62, #poc72{
+			margin-left: 0px;}
+	/*Nut back to top*/
+	#btn-top
+	{
+		display: none;
+		padding: 3px 13.5px 8px;	/*top (right left) bottom*/
+		height: 45px;
+		background: blue; 
+		color: white;
+		border-radius: 4px;
+		border: none; 
+		position: fixed; right: 1%; bottom: 5%;
+	}
+/*2 div footer cung 1 hang*/
+	div.footer{
+		margin-top: 90%;
+		margin-bottom: 1%;
+		width: 100%;
+	}
+	div.design{
+		padding-left: 1%;
+		float:left;
+		width: 87%;
+	}
+	div.footer-content
+	{
+		display: none;
+	}	
+	.diff{
+			width: 100%;
+		}
+	.diff1{	
+			margin: inherit 2% auto 2%; /*top right bottom left*/
+			width: 100%;
+		}
+	.diff2{	
+			margin: 5% 2% auto 2%; /*top right bottom left*/
+			width: 100%;
+		}	
+	}
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js"></script>
+</head>
+<body>
+	<div id="app">
+	<!--<button onclick="scre()">Get</button>-->
+	<diction-widget></diction-widget>
+	<header-menu></header-menu>
+<br/>
+	<div class="main">
+		<menu-bar @display-les="displayles" @hide-func="FunctHide" @over-li="Over" @out-li="Out"></menu-bar>
+		<div class="content" id="content">
+			<div id="1"  v-show="display1">
+				<content-1></content-1>
+			</div>
+			<div id="2"  v-show="display2">
+				<content-2></content-2>
+			</div>
+			<div id="3" v-show="display3">
+				<content-3></content-3>
+		</div>
+			<div id="4"  v-show="display4">
+				<content-4></content-4>
+			</div>
+			<div id="5" v-show="display5">
+				<content-5></content-5>
+			</div>
+	</div>
+<br/>
+	<div class="backtop">
+		<button id="btn-top" class="fa fa-angle-up"><a href="#header"></a></button>
+	</div>
+	<div class="complete">
+		<button id="fi-btn" @click="Fin">{{message}}</button>
+	</div>
+	</div>
+<script src="https://unpkg.com/vue@3"></script>
+<!--<script src="https://nguyenvanthanhminn.github.io/resource/vue3.js"></script>-->
+<script src="https://nguyenvanthanhminn.github.io/nguphap2/template2.js"></script>
+<script>
+// JavaScript Document
+var  an = 0, flow=0, u= 0;
+			document.body.onkeydown= function Keydown(event){
+				if(event.key == "o"){
+					alert("Nhấn phím e để ẩn thanh ngang");
+					document.body.style.overflowX="scroll";
+				}
+				else if(event.key == "e"){
+					alert("Nhấn phím o để hiện thanh ngang");
+					document.body.style.overflowX="hidden";
+				}
+				else if(event.key == "m"){
+					setTimeout(function minimize(){
+						alert("Thu nhỏ thanh menu");
+					  }, 0); 
+					hide();
+					clearTimeout(minimize);
+				}
+			}
+			const social = ()=>{
+		open("https://www.facebook.com/mik.tae.7/","_self");
+	};
+		let w = $(window).width();
+		const hide=() =>{
+			an = 1;
+			if($(window).width() > 414){
+				$(".m-t").hide(0);
+			document.getElementById("menu").style.width="10%";
+			document.getElementById("content").style.width="88%";	
+			document.getElementById("hide").style.display="none";
+			document.getElementById("show").style.display="block";
+			}
+		else{
+			$(".m-t").hide(0);
+			document.getElementById("menu").style.width="30%";
+			document.getElementById("content").style.width="96%";
+			document.getElementById("hide").style.display="none";
+			document.getElementById("show").style.display="block";
+			}
+		};
+	const show=() =>{
+		an = 0;
+		if($(window).width()>414){
+			$(".m-t").show(0);
+			document.getElementById("menu").style.width="34%";
+			document.getElementById("content").style.width="64%";	
+			document.getElementById("hide").style.display="block";
+			document.getElementById("show").style.display="none";
+		}
+		else{
+			$(".m-t").show(0);
+			document.getElementById("menu").style.width="90%";
+			document.getElementById("content").style.width="96%";	
+			document.getElementById("hide").style.display="block";
+			document.getElementById("show").style.display="none";
+		}	
+	};
+	const scre = ()=> {
+		alert(w);
+	};
+	 //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
+    window.onscroll = function() {scrollFunction()};
+    // khai báo hàm scrollFunction
+    function scrollFunction() {
+        // Kiểm tra vị trí hiện tại của con trỏ so với nội dung trang
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //nếu lớn hơn 20px thì hiện button
+            document.getElementById("btn-top").style.display = "block";
+			if (u == 2 || u == 5){
+					 if (an == 0){
+				if((document.documentElement.scrollTop >= 2390 )|| (document.body.scrollTop >= 2390)){
+						document.getElementById("e-diction").style.display= "none";
+						document.getElementById("k-diction").style.display= "block";
+				}
+			}
+			else{
+				if((document.documentElement.scrollTop >= 2200)|| (document.body.scrollTop >= 2200)){
+						document.getElementById("e-diction").style.display= "none";
+						document.getElementById("k-diction").style.display= "block";
+			}
+		}
+			}
+      }
+		else {
+             //nếu nhỏ hơn 20px thì ẩn button
+            document.getElementById("btn-top").style.display = "none";
+        }
+    }
+    //gán sự kiện click cho button
+    document.getElementById('btn-top').addEventListener("click", function(){
+        //Nếu button được click thì nhảy về đầu trang
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+	//Hoi thoai 1
+	//Get the popup
+	var conversation= document.getElementById("myconv");
+	// Get the button that opens the popup
+	var on = document.getElementById("conv");
+	// Close the popup
+	var closeConv= document.getElementById("close");
+	// Declare audio
+	var audio= document.getElementById("audio");
+	var audio1= document.getElementById("audio1");
+	var audio2= document.getElementById("audio2");
+	var audio3= document.getElementById("audio3");
+	var audio4= document.getElementById("audio4");
+	var audio5= document.getElementById("audio5");
+	var audio6= document.getElementById("audio6");
+	// When the user clicks the conv, open the popup
+	on.onclick = function() {
+	  conversation.style.display = "block";
+	}
+	var Play= document.getElementById("play");
+	var Pause= document.getElementById("pause");
+	var Audio= document.getElementById("audio");
+	Play.onclick= function(){
+			audio.play();
+			Func1= setTimeout(function(){
+          	document.getElementById("hang1").style.fontWeight= "bold";
+          }, 2000);
+		    Func2= setTimeout(function(){
+          	document.getElementById("hang2").style.fontWeight= "bold";
+          }, 5000);
+		    Func3= setTimeout(function(){
+
+          	document.getElementById("hang3").style.fontWeight= "bold";
+          }, 8000);
+		Func4= setTimeout(function(){
+          	document.getElementById("hang4").style.fontWeight= "bold";
+          }, 11000);
+		Func5= setTimeout(function(){
+          	document.getElementById("hang5").style.fontWeight= "bold";
+          }, 16000);
+		Func6= setTimeout(function(){
+          	document.getElementById("hang6").style.fontWeight= "bold";
+          }, 19000);
+	}
+	Pause.onclick= function(){
+			audio.pause();
+			clearTimeout(Func1);
+			clearTimeout(Func2);
+			clearTimeout(Func3);
+			clearTimeout(Func4);
+			clearTimeout(Func5);
+			clearTimeout(Func6);
+	}
+	var pl1= document.getElementById("ht1-1");
+	var pl2= document.getElementById("ht1-2");
+	var pl3= document.getElementById("ht2-1");
+	var pl4= document.getElementById("ht2-2");
+	var pl5= document.getElementById("ht3-1");
+	var pl6= document.getElementById("ht3-2");
+	pl1.onclick= function(){
+			audio1.play();
+		document.getElementById("hang1").style.fontWeight= "bold";
+	}
+	pl2.onclick= function(){
+			audio2.play();
+		document.getElementById("hang2").style.fontWeight= "bold";
+	}
+	pl3.onclick= function(){
+			audio3.play();
+		document.getElementById("hang3").style.fontWeight= "bold";
+	}
+	pl4.onclick= function(){
+			audio4.play();
+		document.getElementById("hang4").style.fontWeight= "bold";
+	}
+	pl5.onclick= function(){
+			audio5.play();
+		document.getElementById("hang5").style.fontWeight= "bold";
+	}
+	pl6.onclick= function(){
+			audio6.play();
+		document.getElementById("hang6").style.fontWeight= "bold";
+	}
+	// When the user clicks on close , close the popup
+	closeConv.onclick = function() {
+	  conversation.style.display = "none";
+	  audio.pause();
+	  audio.currentTime = 0;
+	  audio1.pause();
+	  audio1.currentTime = 0;
+	  audio2.pause();
+	  audio2.currentTime = 0;
+	  audio3.pause();
+	  audio3.currentTime = 0;
+	  audio4.pause();
+	  audio4.currentTime = 0;
+	  audio5.pause();
+	  audio5.currentTime = 0;
+	  audio6.pause();
+	  audio6.currentTime = 0;
+			clearTimeout(Func1);
+			clearTimeout(Func2);
+			clearTimeout(Func3);
+			clearTimeout(Func4);
+			clearTimeout(Func5);
+			clearTimeout(Func6);
+		document.getElementById("hang1").style.fontWeight= "normal";
+		document.getElementById("hang2").style.fontWeight= "normal";
+		document.getElementById("hang3").style.fontWeight= "normal";
+		document.getElementById("hang4").style.fontWeight= "normal";
+		document.getElementById("hang5").style.fontWeight= "normal";
+		document.getElementById("hang6").style.fontWeight= "normal";
+	}
+// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	  if (event.target == conversation) {
+		  conversation.style.display = "none";
+		  audio.pause();
+		  audio.currentTime = 0;
+		  audio1.pause();
+		  audio1.currentTime = 0;
+		  audio2.pause();
+		  audio2.currentTime = 0;
+		  audio3.pause();
+		  audio3.currentTime = 0;
+		  audio4.pause();
+		  audio4.currentTime = 0;
+		  audio5.pause();
+		  audio5.currentTime = 0;
+		  audio6.pause();
+		  audio6.currentTime = 0;
+		clearTimeout(Func1);
+		clearTimeout(Func2);
+		clearTimeout(Func3);
+		clearTimeout(Func4);
+		clearTimeout(Func5);
+		clearTimeout(Func6);
+		document.getElementById("hang1").style.fontWeight= "normal";
+		document.getElementById("hang2").style.fontWeight= "normal";
+		document.getElementById("hang3").style.fontWeight= "normal";
+		document.getElementById("hang4").style.fontWeight= "normal";
+		document.getElementById("hang5").style.fontWeight= "normal";
+		document.getElementById("hang6").style.fontWeight= "normal";
+	  }
+	}
+	//Hoi thoai 2
+		let audioplay224= document.getElementById("audioplay224");
+		let play224= document.getElementById("play224");
+		let audiostop224= document.getElementById("stop224");
+		let audioreturn224= document.getElementById("return224");
+		play224.onclick = function Play224(){
+			audioplay224.play();
+			func1 = setTimeout(function(){
+          	document.getElementById("poc2").style.fontWeight= "bold";
+          }, 0);
+			func2= setTimeout(function(){
+          	document.getElementById("poc3").style.fontWeight= "bold";
+          }, 4000);
+			func3= setTimeout(function(){
+          	document.getElementById("poc4").style.fontWeight= "bold";
+          }, 11000);
+			func4= setTimeout(function(){
+          	document.getElementById("poc5").style.fontWeight= "bold";
+          }, 15000);
+			func5= setTimeout(function(){
+          	document.getElementById("poc6").style.fontWeight= "bold";
+          }, 20000);
+			func6= setTimeout(function(){
+          	document.getElementById("poc7").style.fontWeight= "bold";
+          }, 25000);
+		}
+		audiostop224.onclick = function(){
+			audioplay224.pause();
+			clearTimeout(func1);
+			clearTimeout(func2);
+			clearTimeout(func3);
+			clearTimeout(func4);
+			clearTimeout(func5);
+			clearTimeout(func6);
+		}
+		audioreturn224.onclick = function(){
+			clearTimeout(func1);
+			clearTimeout(func2);
+			clearTimeout(func3);
+			clearTimeout(func4);
+			clearTimeout(func5);
+			clearTimeout(func6);
+			audioplay224.pause();
+			audioplay224.currentTime = 0;
+				audioplay224.play();
+			func1= setTimeout(function(){
+          	document.getElementById("poc2").style.fontWeight= "bold";
+          }, 0);
+			func2= setTimeout(function(){
+          	document.getElementById("poc3").style.fontWeight= "bold";
+          }, 4000);
+			func3= setTimeout(function(){
+          	document.getElementById("poc4").style.fontWeight= "bold";
+          }, 11000);
+			func4= setTimeout(function(){
+          	document.getElementById("poc5").style.fontWeight= "bold";
+          }, 15000);
+			func5= setTimeout(function(){
+          	document.getElementById("poc6").style.fontWeight= "bold";
+          }, 20000);
+			func6= setTimeout(function(){
+          	document.getElementById("poc7").style.fontWeight= "bold";
+          }, 25000);
+		}
+		// Hoi thoai 242
+		document.getElementById('play242').onclick= ()=>{
+			document.getElementById('audioplay242').play();
+			func421 = setTimeout(function(){
+          	document.getElementById("row2").style.fontWeight= "bold";
+          }, 0);
+			func422= setTimeout(function(){
+          	document.getElementById("row3").style.fontWeight= "bold";
+          }, 4000);
+			func423= setTimeout(function(){
+          	document.getElementById("row4").style.fontWeight= "bold";
+          }, 8000);
+			func424= setTimeout(function(){
+          	document.getElementById("row5").style.fontWeight= "bold";
+          }, 11000);
+			func425= setTimeout(function(){
+          	document.getElementById("row6").style.fontWeight= "bold";
+          }, 15000);
+			func426= setTimeout(function(){
+          	document.getElementById("row7").style.fontWeight= "bold";
+          }, 17000);
+		};
+		document.getElementById('stop242').onclick= ()=>{
+			document.getElementById('audioplay242').pause();
+			clearTimeout(func421);
+			clearTimeout(func422);
+			clearTimeout(func423);
+			clearTimeout(func424);
+			clearTimeout(func425);
+			clearTimeout(func426);
+		};
+		document.getElementById('return242').onclick = function(){
+			clearTimeout(func421);
+			clearTimeout(func422);
+			clearTimeout(func423);
+			clearTimeout(func424);
+			clearTimeout(func425);
+			clearTimeout(func426);
+			audioplay242.pause();
+			audioplay242.currentTime = 0;
+				audioplay242.play();
+			func421 = setTimeout(function(){
+          	document.getElementById("row2").style.fontWeight= "bold";
+          }, 0);
+			func422= setTimeout(function(){
+          	document.getElementById("row3").style.fontWeight= "bold";
+          }, 4000);
+			func423= setTimeout(function(){
+          	document.getElementById("row4").style.fontWeight= "bold";
+          }, 8000);
+			func424= setTimeout(function(){
+          	document.getElementById("row5").style.fontWeight= "bold";
+          }, 11000);
+			func425= setTimeout(function(){
+          	document.getElementById("row6").style.fontWeight= "bold";
+          }, 15000);
+			func426= setTimeout(function(){
+          	document.getElementById("row7").style.fontWeight= "bold";
+          }, 17000);
+		}
+	// Phan biet 252
+				let diffplay = document.getElementById('diffplay');
+				let diffpause = document.getElementById('diffpause');
+				let diffshow = document.getElementById('diffshow');
+				let diffmain = document.getElementById('diffmain');
+				let diffclose = document.getElementById('diffclosebtn');
+				let diff252 = document.getElementById('diff252');
+				let diff2521 = document.getElementById('diff2521');
+				let diff2522 = document.getElementById('diff2522');
+				let diff25221 = document.getElementById('diff25221');
+				let diff2523 = document.getElementById('diff2523');
+				var play = false;
+				var diffon = false;
+				diffshow.onclick= function(){
+					if(!diffon){
+						diffmain.style.display= 'block';
+						diffon= true;
+					}
+					else{
+						diffmain.style.display= 'none';
+						diffon= false;
+					}
+				}
+				diffclose.onclick= function(){
+					diffmain.style.display= 'none';
+				}
+				diffplay.onclick= function(){
+					if(!play){
+							diffplay.innerHTML = "Dừng đọc";
+						dif1= setTimeout(function(){
+							diff252.play();
+						  }, 0);
+						dif2= setTimeout(function(){
+							diff2521.play();
+						  }, 3000);
+						dif3= setTimeout(function(){
+							diff2522.play();
+						  }, 5000);
+						dif4= setTimeout(function(){
+							diff25221.play();
+						  }, 21000);
+						dif5= setTimeout(function(){
+							diff2523.play();
+						  }, 25000);
+						dif6= setTimeout(function(){
+							diffplay.innerHTML = "Phát nội dung";
+						  }, 40000);
+						play = !play;
+					}
+					else{
+						diffplay.innerHTML = "Phát nội dung";
+						diff252.pause();
+						diff252.currentTime = 0;
+						diff2521.pause();
+						diff2521.currentTime = 0;
+						diff2522.pause();
+						diff2522.currentTime = 0;
+						diff25221.pause();
+						diff25221.currentTime = 0;
+						diff2523.pause();
+						diff2523.currentTime = 0;
+						clearTimeout(dif1);
+						clearTimeout(dif2);
+						clearTimeout(dif3);
+						clearTimeout(dif4);
+						clearTimeout(dif5);
+						play = !play;
+					}
+				}
+				var cool = false;
+				const diffmode = () =>{
+					if(!cool){
+						cool = true;
+						document.querySelector("#difftitle1").style.background = "#3807FF";
+						document.querySelector("#difftitle2").style.background = "#3807FF";
+						document.querySelector("#diffcontent1").style.borderColor = "#223EE3";
+						document.querySelector("#diffcontent2").style.borderColor = "#223EE3";
+						diffplay.style.background= "#3807FF";
+						diffclose.style.background= "#84B4E7";
+					}
+					else{
+						cool = false;
+						document.querySelector("#difftitle1").style.background = "#FF060A";
+						document.querySelector("#difftitle2").style.background = "#FF060A";
+						document.querySelector("#diffcontent1").style.borderColor = "#FF8105";
+						document.querySelector("#diffcontent2").style.borderColor = "#FF8105";
+						diffplay.style.background= "#F8A200";
+						diffclose.style.background= "#EBE098";
+					}
+				};
+			diffclose.onmouseover= function(){
+				if(!cool){
+					diffclose.style.background= "#F8A200";
+				}
+				else{
+					diffclose.style.background= "#3807FF";
+				}
+			}
+			diffclose.onmouseout= function(){
+				if(cool){
+					diffclose.style.background= "#84B4E7";
+				}
+				else{
+					diffclose.style.background= "#EBE098";
+				}
+			}
+/*// Phat am tieng Han
+	const func31= ()=>*/
+</script>
+	<footer>
+		<div class="footer">
+			<div class="design">
+				<p><span class="fa fa-copyright" style="font-size:110%;"></span>&ensp;Trang ngữ pháp<br/><span id="s" onclick="social()">Designed and coded by MikTae</span></p>
+			</div>
+			<div class="footer-content">
+				<p>Ngữ pháp chủ điểm 2</p>
+			</div>
+		</div>
+		</footer>
+</div>
+</body>
+</html>
